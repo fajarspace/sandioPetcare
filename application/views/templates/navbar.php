@@ -6,12 +6,12 @@ $settingss = $this->db->get('settings')->row_array();
         <ul class="nav-container">
             <li class="logo">
 
-                <a href="<?= base_url(); ?>"><div><img src="<?= base_url();  ?>assets/saya/img/LOGO.png" alt="Sandio Petcare"></div></a>
+                <a href="<?= base_url(); ?>"><img src="<?= base_url(); ?>assets/images/logo/<?= $settingss['logo']; ?>" alt="logo" width="100"></div></a>
 
             </li>
             <li class="nav-formsearch">
-                <form action="filter.php" method="get">
-                    <input type="text" name="keyword" placeholder="Cari...">
+                <form action="<?= base_url(); ?>search" method="get">
+                    <input type="text" name="q" placeholder="Cari...">
                     <button type="submit" name="search"><i class="fa-solid fa-magnifying-glass"></i></button>
                 </form>
             </li>

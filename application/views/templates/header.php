@@ -13,10 +13,15 @@
     <!-- jquery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 
-    <link rel="stylesheet" type="text/css" href="<?= base_url();  ?>assets/saya/css/landing.css">
-    <link rel="stylesheet" type="text/css" href="<?= base_url();  ?>assets/saya/css/nav.css">
-    <link rel="stylesheet" type="text/css" href="<?= base_url();  ?>assets/saya/css/footer.css">
-    <link rel="stylesheet" type="text/css" href="<?= base_url();  ?>assets/saya/css/dark_mode.css">
+    <!-- js -->
+
+
+    <!-- static css -->
+    <link rel="stylesheet" type="text/css" href="<?= base_url();  ?>assets/static/css/nav.css">
+    <link rel="stylesheet" type="text/css" href="<?= base_url();  ?>assets/static/css/landing.css">
+    <link rel="stylesheet" type="text/css" href="<?= base_url();  ?>assets/static/css/footer.css">
+    <link rel="stylesheet" type="text/css" href="<?= base_url();  ?>assets/static/css/dark_mode.css">
+    <link rel="stylesheet" type="text/css" href="<?= base_url();  ?>assets/static/css/kategori.css">
 
 
     <link
