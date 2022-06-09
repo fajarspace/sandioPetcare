@@ -18,7 +18,8 @@ body{
 }
 a{
     text-decoration: none;
-    color: #fff;
+    color: grey;
+    font-size: 18px;
 }
 ul{
     list-style: none;
@@ -45,6 +46,16 @@ ul{
     border-radius: 20px;
     text-align: center;
     padding: 2px;
+}
+.link{
+    font-family: 'Quicksand', sans-serif;
+    position: relative;
+    margin: 0 auto;
+    width: 200px;
+    height: 30px;
+    text-align: center;
+    padding: 2px;
+    text-decoration: underline;
 }
 .header-produk h1{
     font-family: 'Quicksand', sans-serif;
