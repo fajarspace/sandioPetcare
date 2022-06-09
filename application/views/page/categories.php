@@ -21,11 +21,9 @@
     <?php endforeach; ?>
 </div>
 
-</div>
+<div class="clearfix"></div>
+<?php }else{ ?>
+    <div class="alert alert-warning">Upss. Tidak ada produk yang dapat ditampilkan</div>
+<?php } ?>
 </main>
-            <div class="clearfix"></div>
-            <?php }else{ ?>
-                <div class="alert alert-warning">Upss. Tidak ada produk yang dapat ditampilkan</div>
-            <?php } ?>
-        
             

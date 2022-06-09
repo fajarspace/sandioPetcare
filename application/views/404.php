@@ -59,7 +59,7 @@
       <footer class="sticky-footer">
         <div class="container my-auto">
           <div class="copyright text-center my-auto">
-            <span>Copyright &copy; Buntomart <script>document.write(new Date().getFullYear())</script></span>
+            <span>Copyright &copy; Sandio Petcare <script>document.write(new Date().getFullYear())</script></span>
           </div>
         </div>
       </footer>
