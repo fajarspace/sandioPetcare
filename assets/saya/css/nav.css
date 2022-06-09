@@ -1,0 +1,217 @@
+/* Import Font */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+
+
+/* Navbar */
+nav{
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 70px;
+    background: #fff;
+    box-shadow: 0 0 5px #cecece;
+    z-index: 999999999999;
+}
+.nav-container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.logo div img{
+    width: 100px;
+    height: 50px;
+}
+.nav-formsearch form input{
+    width: 20vw;
+    height: 40px;
+    border-radius: 100px;
+    outline: none;
+    padding: 12px;
+    border: 2px solid #E88D2F;
+    font-family: 'Quicksand', sans-serif;
+    position: relative;
+    left: 50px;
+    background: transparent;
+}
+.nav-formsearch form button{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: none;
+    color: #E88D2F;
+    background: transparent;
+    cursor: pointer;
+    font-size: 15px;
+    position: relative;
+}
+.nav-kategori div{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    height: 70px;
+}
+.nav-kategori div h2{
+    font-family: 'Quicksand', sans-serif;
+    font-size: 15px;
+    text-transform: uppercase;
+    color: #E88D2F;
+}
+.nav-kategori div i{
+    font-size: 10px;
+    transition: ease .5s all;
+}
+.nav-keranjang{
+    margin-top: -18px;
+}
+.nav-keranjang i{
+    color: #E88D2F;
+}
+.nav-keranjang a div{
+    color: #E88D2F;
+    position: relative;
+    width: 18px;
+    height: 18px;
+    background: #E88D2F;
+    color: #fff;
+    border-radius: 50%;
+    font-size: 12px;
+    border: .5px solid #fff;
+    font-family: 'Quicksand', sans-serif;
+    text-align: center;
+    right: -13px;
+    bottom: -9px;
+}
+.nav-keranjang a{
+    font-size: 22px;
+}
+.list-kategori{
+    background: #0000008b;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    top: 0;
+    display: none;
+    z-index: 33;
+}
+.list-kategori ul{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    margin-top: 70px;
+    margin-left: 65vw;
+    width: 200px;
+    background: #fff;
+    height: max-content;
+    padding: 5px 0;
+    gap: 10px;
+}
+@media only screen and (max-width: 1450px){
+    .list-kategori ul{
+        margin-left: 61vw;
+    }
+}
+.list-kategori ul a{
+    width: 100%;
+    text-align: center;
+    cursor: pointer;
+    height: 50px;
+    padding: 15px 0;
+}
+.list-kategori ul a{
+    color: #E88D2F;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 15px;
+    text-transform: uppercase;
+    font-weight: 800;
+    transition: ease .5s all;
+}
+.list-kategori ul a:hover{
+    color: #fff;
+    background: #E88D2F;
+}
+
+.nav-hamburger{
+    display: none;
+}
+.nav-hamburger i:nth-child(2){
+    display: none;
+}
+
+@media only screen and (max-width: 878px){
+    .nav-container{
+        justify-content: space-between;
+        padding: 0 20px 0 20px;
+    }
+    .nav-formsearch form input{
+        margin-left: -50px;
+        width: 30vw;
+    }
+    .nav-kategori{
+        display: none;
+    }
+    .nav-keranjang{
+        margin-right: 10px;
+        margin-left: 10px;
+    }
+    .nav-hamburger{
+        display: block;
+        color: #E88D2F;
+        font-size: 25px;
+        cursor: pointer;
+    }
+    .list-kategori-mobile {
+        background: #0000008b;
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        top: 0;
+        display: none;
+        z-index: 33;
+    }
+    .list-kategori-mobile ul{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        margin-top: 70px;
+        width: 200px;
+        background: #fff;
+        padding: 5px 0;
+        gap: 10px;
+        transform: translateX(30rem);
+        transition: transform 0.5s cubic-bezier(0.56,0.1,0.34,0.91);
+        position: fixed;
+        right: 0;
+        bottom: 0;
+        top: 0;
+    }
+    .list-kategori-mobile ul a{
+        width: 100%;
+        text-align: center;
+        cursor: pointer;
+        height: 50px;
+        padding: 15px 0;
+    }
+    .list-kategori-mobile ul a{
+        color: #E88D2F;
+        font-family: 'Quicksand', sans-serif;
+        font-size: 15px;
+        text-transform: uppercase;
+        font-weight: 800;
+        transition: ease .5s all;
+    }
+    .list-kategori-mobile ul a:hover{
+        color: #fff;
+        background: #E88D2F;
+    }
+}

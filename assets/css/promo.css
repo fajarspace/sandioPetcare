@@ -1,0 +1,113 @@
+div.wrapper {
+	height: auto;
+	position: relative;
+	margin: auto;
+	margin-bottom: 70px;
+	margin-top: 30px;
+	width: 1050px;
+}
+
+div.wrapper img.img-banner {
+	margin-bottom: 20px;
+	width: 100%;
+}
+
+div.wrapper div.countdown {
+	background: linear-gradient(to right, #008cd7, #5ec7ff);
+	border-radius: 5px;
+	padding: 15px 30px;
+	width: 100%;
+}
+
+div.wrapper div.countdown p {
+	margin-bottom: 0;
+}
+
+div.wrapper div.main-product {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	margin-top: 20px;
+}
+
+div.wrapper div.main-product div.card {
+	box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 6px 0px;
+	border: none;
+	border-radius: 7px;
+	margin: 0 12px;
+	margin-bottom: 7px;
+	width: 151px;
+}
+
+div.wrapper div.main-product div.card:hover div.card-body p.card-text {
+	color: #008cd7;
+}
+
+div.wrapper div.main-product div.card div.card-body {
+	margin-top: 10px;
+	padding: 0;
+}
+
+div.wrapper div.main-product div.card div.card-body p.card-text {
+	color: #333333;
+	font-size: 15px;
+	line-height: 22px;
+	overflow: hidden;
+	padding: 0 10px;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-line-clamp: 2; /* number of lines to show */
+	-webkit-box-orient: vertical;
+}
+
+div.wrapper div.main-product div.card div.card-body p.oldPrice {
+	color: #777777;
+	font-size: 14px;
+	margin-top: 5px;
+	padding: 0 10px;
+	text-decoration: line-through;
+}
+
+div.wrapper div.main-product div.card div.card-body p.newPrice {
+	color: #2c598a;
+	font-family: "Nunito";
+	font-size: 15px;
+	padding: 0 10px;
+	font-weight: 600;
+	margin-top: 5px;
+}
+
+@media screen and (max-width: 1150px) {
+	div.wrapper {
+		width: 700px;
+	}
+
+	div.wrapper img.img-banner {
+		margin-bottom: 10px;
+	}
+}
+
+@media screen and (max-width: 800px) {
+	div.wrapper {
+		width: 95%;
+	}
+
+	div.wrapper div.countdown p {
+		font-size: 13px;
+	}
+
+	div.wrapper div.main-product {
+		display: block;
+		margin-top: 0px;
+	}
+
+	div.wrapper div.main-product div.card {
+		float: left;
+		margin: 4%;
+		width: 42%;
+	}
+
+	div.wrapper div.main-product div.card div.card-body p.price-padding {
+		padding-bottom: 26px;
+	}
+}

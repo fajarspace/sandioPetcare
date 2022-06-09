@@ -1,0 +1,368 @@
+a:hover {
+	text-decoration: none;
+}
+
+i.loading-animation {
+	animation: loading 1.5s infinite linear;
+}
+
+@keyframes loading {
+	from {
+		transform: rotate(0);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+	-moz-appearance: textfield;
+}
+
+nav li {
+	margin: 5px;
+	color: white;
+}
+
+div.top-nav {
+	height: 33px;
+}
+
+i.icon-search-navbar {
+	cursor: pointer;
+	position: relative;
+	top: 1px;
+	font-size: 18px;
+	margin-right: 30px;
+}
+
+i.mobile-search {
+	display: none;
+}
+
+div.search-form {
+	background-color: #fdc80e;
+	display: none;
+	height: 100vh;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 99;
+}
+
+div.search-form form {
+	background-color: saddlebrown;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	width: 90%;
+}
+
+div.search-form input {
+	border: none;
+	box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.2);
+	box-sizing: border-box;
+	height: 50px;
+	outline: none;
+	padding: 0 20px;
+	width: calc(100% - 100px);
+}
+
+div.search-form button {
+	background-color: #2cb290;
+	border: none;
+	box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.2);
+	box-sizing: border-box;
+	color: white;
+	height: 50px;
+	outline: none;
+	padding: 0 20px;
+	transition: 0.2s;
+	width: 100px;
+}
+
+div.search-form button:hover {
+	background-color: #009479;
+}
+
+div.search-form i {
+	cursor: pointer;
+	color: white;
+	font-size: 30px;
+	position: absolute;
+	right: 30px;
+	top: 90px;
+}
+
+div.overlay-screen {
+	background-color: white;
+	height: 100vh;
+	position: fixed;
+	width: 100%;
+	z-index: 11;
+}
+
+img.img-loading {
+	position: fixed;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	width: 120px;
+	z-index: 12;
+}
+
+div.carousel img {
+	width: 100%;
+}
+
+/* FOOTER */
+
+footer {
+	height: auto;
+	width: 100%;
+}
+
+footer.bg-light {
+	border-top: 1px solid #d6d6d6;
+}
+
+footer div.subscribe {
+	background-color: #363f4d;
+	height: 200px;
+	width: 100%;
+}
+
+footer div.subscribe div.main {
+	display: flex;
+	flex-direction: row;
+	height: 100%;
+	margin: auto;
+	position: relative;
+	width: 1100px;
+}
+
+footer div.subscribe div.main div.text {
+	box-sizing: border-box;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding-right: 30px;
+	width: 50%;
+}
+
+footer div.subscribe div.main div.text h2 {
+	color: white;
+	font-family: "Open Sans";
+	font-size: 25px;
+	font-weight: 700;
+}
+
+footer div.subscribe div.main div.text p {
+	color: white;
+	font-family: "Open Sans";
+	font-size: 15px;
+	margin-top: 5px;
+}
+
+footer div.subscribe div.main div.form {
+	box-sizing: border-box;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	position: relative;
+	width: 50%;
+}
+
+footer div.subscribe div.main div.form i.fa-envelope {
+	color: #333333;
+	font-size: 21px;
+	margin-left: 15px;
+	position: absolute;
+	top: 50%;
+	transform: translate(0, -50%);
+}
+
+footer div.subscribe div.main div.form input {
+	border: none;
+	border-bottom-left-radius: 2px;
+	border-top-left-radius: 2px;
+	box-sizing: border-box;
+	font-family: "Nunito";
+	font-size: 15px;
+	font-weight: 500;
+	height: 45px;
+	outline: none;
+	padding: 0 15px;
+	padding-left: 45px;
+	width: calc(100% - 120px);
+}
+
+footer div.subscribe div.main div.form button {
+	background-color: #00b290;
+	border: none;
+	border-bottom-right-radius: 2px;
+	border-top-right-radius: 2px;
+	box-sizing: border-box;
+	color: white;
+	cursor: pointer;
+	font-family: "Nunito";
+	font-size: 15px;
+	font-weight: 500;
+	height: 45px;
+	transition: 0.2s;
+	width: 120px;
+}
+
+footer div.subscribe div.main div.form button:hover {
+	background-color: #009479;
+}
+
+footer div.information {
+	height: auto;
+	width: 100%;
+}
+
+footer div.information div.main {
+	display: flex;
+	flex-direction: row;
+	height: auto;
+	justify-content: space-between;
+	margin: auto;
+	padding: 50px 0;
+	position: relative;
+	width: 1100px;
+}
+
+footer div.information div.main h2.brand-footer {
+	color: #00b290;
+}
+
+footer div.information div.main div.about {
+	box-sizing: border-box;
+	padding-right: 30px;
+	width: 400px;
+}
+
+footer div.information div.main div.about img.logo {
+	width: 170px;
+}
+
+footer div.information div.main div.about p {
+	color: #333333;
+	font-family: "Open Sans";
+	font-size: 15px;
+	font-weight: 500;
+	margin-top: 10px;
+}
+
+footer div.information div.main div.about div.sosmed {
+	margin-top: 15px;
+}
+
+footer div.information div.main div.about div.sosmed h3 {
+	color: #222;
+	font-family: "Nunito";
+	font-size: 17px;
+	margin-bottom: 7px;
+}
+
+footer div.information div.main div.about div.sosmed a {
+	color: #333333;
+	font-size: 18px;
+	margin-right: 15px;
+}
+
+footer div.information div.main div.about div.sosmed a:hover {
+	color: #009479;
+}
+
+footer div.information div.main div.item h3.title {
+	color: #222;
+	font-family: "Nunito";
+	font-size: 17px;
+	font-weight: 700;
+	margin-bottom: 10px;
+}
+
+footer div.information div.main div.item a,
+footer div.information div.main div.item p {
+	color: #333333;
+	display: block;
+	font-family: "Open Sans";
+	font-size: 15px;
+	font-weight: 400;
+	margin: 7px 0;
+}
+
+footer div.information div.main div.item a:hover {
+	color: #009479;
+}
+
+footer div.contact {
+	border-top: 1px solid #ddd;
+	height: 150px;
+	width: 100%;
+}
+
+footer div.contact div.main {
+	display: flex;
+	flex-direction: row;
+	height: 100%;
+	justify-content: space-around;
+	margin: auto;
+	position: relative;
+	width: 1200px;
+}
+
+footer div.contact div.main div.item {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	height: 100%;
+	width: 300px;
+}
+
+footer div.contact div.main div.item i {
+	color: #00b290;
+	font-size: 30px;
+	text-align: center;
+}
+
+footer div.contact div.main div.item p {
+	color: #444;
+	font-family: "Nunito";
+	font-size: 15px;
+	margin-top: 15px;
+	text-align: center;
+}
+
+footer div.copyright {
+	background-color: #363f4d;
+	box-sizing: border-box;
+	display: flex;
+	flex-direction: column;
+	height: 50px;
+	justify-content: center;
+	padding: 0 20px;
+	position: relative;
+	width: 100%;
+}
+
+footer div.copyright p {
+	color: #FFFFFF;
+	font-family: "Open Sans";
+	font-size: 13px;
+	position: absolute;
+	left: 50%;
+	transform: translate(-50%, 0);
+	text-align: center;
+}

@@ -1,0 +1,67 @@
+/* Import Font */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+
+/* footer */
+footer{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    min-height: 140px;
+    background-color: #fff;
+    box-shadow: 0 5px 8px 0 lightgrey, 0 6px 20px 0 #EEEEEE;
+    z-index: 32;
+}
+.footer-section{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    min-height: 70px;
+    gap: 20px;
+    align-items: center;
+    padding: 0 50px;
+}
+.footer-section h3{
+    font-family: 'Quicksand', sans-serif;
+    font-size: 16px;
+    color: black;
+}
+
+.footer-section div{
+    background: #E88D2F;
+    margin: 2px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    text-align: center;
+    padding: 11px;
+    transition: ease .3s all;
+}
+.footer-section div:hover {
+    color: #E88D2F;
+    background-color: #eaeaea;
+    box-shadow: -1px 1px 5px #cecece;
+}
+
+.footer-section:nth-last-child(1){
+    background: #E88D2F;
+    color: #fff;
+    font-family: 'Quicksand', sans-serif;
+    text-transform: capitalize;
+    font-size: 16px;
+    font-weight: 600;
+    justify-content: space-between;
+}
+.footer-section:nth-last-child(1) strong{
+    text-transform: uppercase;
+    font-size: 15px;
+}
+@media only screen and (max-width: 430px){
+    .footer-section{
+        padding: 20px;
+        gap: 10px;
+    }
+}

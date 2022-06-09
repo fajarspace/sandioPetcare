@@ -1,0 +1,32 @@
+div.wrapper {
+	height: auto;
+	margin: auto;
+	margin-top: 30px;
+	position: relative;
+	width: 1000px;
+}
+
+div.wrapper div.top p {
+	font-family: "Nunito";
+	font-size: 20px;
+}
+
+div.wrapper div.main {
+	margin-top: 20px;
+}
+
+div.wrapper div.main img {
+	border-radius: 5px;
+	margin-bottom: 20px;
+	width: 100%;
+}
+
+@media screen and (max-width: 1050px) {
+	div.wrapper {
+		width: 90%;
+	}
+
+	div.wrapper div.main {
+		margin-top: 0px;
+	}
+}
