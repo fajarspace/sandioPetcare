@@ -5,8 +5,7 @@ $settingss = $this->db->get('settings')->row_array();
     <nav>
         <ul class="nav-container">
             <li class="logo">
-
-                <a href="<?= base_url(); ?>"><img src="<?= base_url(); ?>assets/images/logo/<?= $settingss['logo']; ?>" alt="logo" width="100"></div></a>
+                <a href="<?= base_url(); ?>"><img src="<?= base_url(); ?>assets/images/logo/<?= $settingss['logo']; ?>" alt="logo" width="100"></a>
 
             </li>
             <li class="nav-formsearch">

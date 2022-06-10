@@ -15,22 +15,21 @@
 
     <!-- js -->
 
-    <!-- page css -->
-    <link rel="stylesheet" type="text/css" href="<?= base_url();  ?>assets/css/payment.css">
-    <link rel="stylesheet" type="text/css" href="<?= base_url();  ?>assets/css/cart.css">
-
     <!-- static css -->
     <link rel="stylesheet" type="text/css" href="<?= base_url();  ?>assets/static/css/nav.css">
     <link rel="stylesheet" type="text/css" href="<?= base_url();  ?>assets/static/css/landing.css">
     <link rel="stylesheet" type="text/css" href="<?= base_url();  ?>assets/static/css/footer.css">
     <link rel="stylesheet" type="text/css" href="<?= base_url();  ?>assets/static/css/dark_mode.css">
+    <link rel="stylesheet" type="text/css" href="<?= base_url();  ?>assets/static/css/payment.css">
+    <link rel="stylesheet" type="text/css" href="<?= base_url();  ?>assets/static/css/cart.css">
+    <link rel="stylesheet" type="text/css" href="<?= base_url();  ?>assets/static/css/products.css">
 
     <link
       rel="shortcut icon"
       href="<?= base_url(); ?>assets/images/logo/<?= $this->Settings_model->getSetting()['favicon']; ?>"
       type="image/x-icon"
     />
-    
+
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
       
     <link rel="stylesheet" href="<?= base_url(); ?>assets/select2-4.0.6-rc.1/dist/css/select2.min.css">

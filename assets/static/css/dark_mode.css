@@ -85,7 +85,7 @@ body.darkmode a{
 	color: rgb(227, 227, 227);
 }
 .darkmode .produk-box h3{
-	
+	color: #F806CC;
 }
 .darkmode .produk-box a:hover {
 	box-shadow: 0 3px 8px 3px rgb(30, 30, 30), 0 6px 20px 0 rgb(40, 40, 40);
@@ -112,4 +112,10 @@ body.darkmode a{
     background: #A91079;
     color: #fff;
 
+}
+.darkmode .footer-row {
+    background: #A91079;
+}
+.darkmode .footer-col a {
+    color: #fff;
 }

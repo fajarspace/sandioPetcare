@@ -4,6 +4,7 @@ $setting = $this->Settings_model->getSetting();
 $sosmed = $this->Settings_model->getSosmed();
 $footerhelp = $this->Settings_model->getFooterHelp();
 $footerinfo = $this->Settings_model->getFooterInfo();
+$settingss = $this->db->get('settings')->row_array();
 $rekening = $this->db->get('rekening');
  ?>
     <footer>
@@ -15,10 +16,33 @@ $rekening = $this->db->get('rekening');
                   </a>
                 <?php endforeach; ?>
         </div>
-        <div class="footer-section">
-            &copy; 2022 copyright <strong>sandio petcare</strong>
+        <div class="footer-row">
+            
+            <div class="footer-col">
+                <h4>Bantuan</h4>
+                <ul>
+                    <?php foreach($footerhelp->result_array() as $f): ?>
+                  <li><a href="<?= base_url(); ?><?= $f['slug']; ?>"><?= $f['title']; ?></a></li>
+                <?php endforeach; ?>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Pembayaran</h4>
+                <ul>
+                    <li><?php foreach($rekening->result_array() as $r): ?>
+                  <p class="mb-0"><?= $r['rekening']; ?></p>
+                <?php endforeach; ?></li>
+                </ul>
+            </div>
+            <div class="footer-col" >
+                <h4>
+                    Copyright &copy; <script>document.write(new Date().getFullYear());</script> Sandio Petcare
+                </h4>
+            </div>
+            
         </div>
     </footer>
+
     <script src="<?= base_url();  ?>assets/static/js/nav.js"></script>
     <script src="<?= base_url();  ?>assets/static/js/dark_mode.js"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
