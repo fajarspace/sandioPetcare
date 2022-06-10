@@ -139,12 +139,6 @@
           >
         </li>
 
-        <li class="nav-item">
-          <a class="nav-link" href="<?= base_url(); ?>administrator/email">
-            <i class="fas fa-fw fa-envelope"></i>
-            <span>Kirim Email</span></a
-          >
-        </li>
 
         <li class="nav-item">
           <a class="nav-link" href="<?= base_url(); ?>administrator/categories">
@@ -160,26 +154,6 @@
           >
         </li>
 
-        <li class="nav-item">
-          <a class="nav-link" href="<?= base_url(); ?>administrator/package">
-            <i class="fas fa-fw fa-archive"></i>
-            <span>Paket Produk</span></a
-          >
-        </li>
-
-        <li class="nav-item">
-          <a class="nav-link" href="<?= base_url(); ?>administrator/promo">
-            <i class="fas fa-fw fa-fire"></i>
-            <span>Promo</span></a
-          >
-        </li>
-
-        <li class="nav-item">
-          <a class="nav-link" href="<?= base_url(); ?>administrator/testimonials">
-            <i class="fas fa-fw fa-comments"></i>
-            <span>Testimoni</span></a
-          >
-        </li>
 
         <li class="nav-item">
           <a class="nav-link" href="<?= base_url(); ?>administrator/pages">
