@@ -1,3 +1,4 @@
+<main class="container-produk">
 <div class="wrapper">
     <div class="navigation">
         <a href="<?= base_url(); ?>">Home</a>
@@ -7,103 +8,143 @@
         <a><?= $product['title']; ?></a>
     </div>
     <?php $setting = $this->db->get('settings')->row_array(); ?>
-    <div class="top">
-        <div class="main-top">
-            <div class="img">
-                <a href="<?= base_url(); ?>assets/images/product/<?= $product['img']; ?>" data-lightbox="img-1">
-                    <img src="<?= base_url(); ?>assets/images/product/<?= $product['img']; ?>" alt="produk" class="jumbo-thumb">
-                </a>
-                <div class="img-slider">
-                    <img src="<?= base_url(); ?>assets/images/product/<?= $product['img']; ?>" alt="gambar" class="thumb">
+    
+        <section class="produk">
+            <div class="gambar">
+
+
+                <div class="gambar-besar">
+                    <div class="produk1 aktif">
+                        
+                            <img src="<?= base_url(); ?>assets/images/product/<?= $product['img']; ?>" alt="produk">
+                        
+                    </div>
+                    <div class="produk2">
+                        <img src="<?= base_url(); ?>assets/images/product/<?= $product['img']; ?>" alt="gambar" class="thumb">
                     <?php foreach($img->result_array() as $d): ?>
                         <img src="<?= base_url(); ?>assets/images/product/<?= $d['img']; ?>" alt="gambar" class="thumb">
                     <?php endforeach; ?>
+                    </div>
                 </div>
+                <div class="list-gambar">
+                    <div class="produk1 aktif">
+                        <?php if($d['produk_foto1'] == ""){ ?>
+                            <img src="assets/img/produk/noimage.png">
+                        <?php }else{ ?>
+                            <img src="<?= base_url(); ?>assets/images/product/<?= $d['img']; ?>" alt="produk">
+                        <?php } ?>
+                    </div>
+                    <div class="produk2">
+                        <?php if($d['img'] == ""){
+                            ?><script>
+                            $(".produk2").css("display", "none");
+                            </script><?php
+                            false; 
+                            }else{ ?>
+                            <img src="assets/img/produk/<?= $d['img'] ?>">
+                        <?php } ?>
+                    </div>
+                    <div class="produk3">
+                        <?php if($d['produk_foto3'] == ""){
+                            ?><script>
+                            $(".produk3").css("display", "none");
+                            </script><?php
+                            false; }else{ ?>
+                            <img src="assets/img/produk/<?= $d['produk_foto3'] ?>">
+                        <?php } ?>
+                    </div>
+                </div>
+
             </div>
-            <div class="ket">
-                <h1 class="title"><?= $product['title']; ?></h1>
+            <div class="harga">
+            <div class="stok-status">
+                    <?php
+                    if ($product['stock'] > 0 ) {
+                        echo 'Stok Barang Ready';
+                        ?><script>
+                            $(".harga > .stok-status").css("background", "#5BB75B");
+                        </script><?php
+                    }else{
+                        echo 'Stok Barang Habis';
+                        ?><script>
+                            $(".harga > .stok-status").css("background", "#D9534F");
+                        </script><?php
+                    }
+                    ?>
+                </div>
+                <div class="judul"><?= $product['title']; ?></div>
                 <p class="subtitle">Terjual <?= $product['transaction']; ?> Produk &bull; <?= $product['viewer']; ?>x Dilihat</p>
                 <hr>
-                <table>
-                    <?php if($setting['promo'] == 1){ ?>
-                    <?php if($product['promo_price'] == 0){ ?>
-                        <tr>
-                            <td class="t">Harga</td>
-                            <td class="price">Rp <?= str_replace(",",".",number_format($product['price'])); ?></td>
-                        </tr>
-                    <?php }else{ ?>
-                        <tr>
-                            <td class="t">Harga</td>
-                            <td class="oldPrice">Rp <?= str_replace(",",".",number_format($product['price'])); ?></td>
-                        </tr>
-                        <tr class="newPrice">
-                            <td></td>
-                            <td class="price">Rp <?= str_replace(",",".",number_format($product['promo_price'])); ?></td>
-                        </tr>
-                    <?php } ?>
-                    <?php }else{ ?>
-                        <tr>
-                            <td class="t">Harga</td>
-                            <td class="price">Rp <?= str_replace(",",".",number_format($product['price'])); ?></td>
-                        </tr>
-                    <?php } ?>
+                
+                    <br>
                     <tr>
-                        <td class="t">Kondisi</td>
-                        <?php if($product['condit'] == 1){ ?>
-                            <td>Baru</td>
-                        <?php }else{ ?>
-                            <td>Bekas</td>
-                        <?php } ?>
-                    </tr>
-                    <tr>
-                        <td class="t">Berat</td>
-                        <td><?= $product['weight']; ?> gram</td>
-                    </tr>
-                    <tr>
-                        <td class="t">Stok</td>
+                        <td class="t">Stok Tersedia:</td>
                         <td><?= $product['stock']; ?> produk</td>
                     </tr>
-                    <?php if($product['stock'] > 0){ ?>
-                    <tr>
-                        <?php if($setting['promo'] == 1){ ?>
-                        <?php if($product['promo_price'] == 0){ ?>
-                            <?php $priceP = $product['price']; ?>
-                        <?php }else{ ?>
-                            <?php $priceP = $product['promo_price']; ?>
-                        <?php } ?>
-                        <?php }else{ ?>
-                            <?php $priceP = $product['price']; ?>
-                        <?php } ?>
-                        <td class="t">Jumlah</td>
+                <div class="rp">
+                    <table>
+                        <?php if($product['stock'] > 0){ ?>
+                        <tr>
                         <td>
-                            <button onclick="minusProduct(<?= $priceP; ?>)">-</button><!--
+                            <div class="counter">
+                            <button class="down" onclick="minusProduct(<?= $priceP; ?>)">-</button><!--
                         --><input disabled type="text" value="1" id="qtyProduct" class="valueJml"><!--
-                        --><button onclick="plusProduct(<?= $priceP; ?>, <?= $product['stock']; ?>)">+</button>
+                        --><button class="up" onclick="plusProduct(<?= $priceP; ?>, <?= $product['stock']; ?>)">+</button>
+                        </div>
                         </td>
                     </tr>
                     <tr>
-                        <td class="t">Total</td>
-                        <td>Rp <span id="detailTotalPrice"><?= str_replace(",",".",number_format($priceP)); ?></span></td>
-                    </tr>
+                            <td class="price">Rp <?= str_replace(",",".",number_format($product['price'])); ?></td>
+                        </tr>
                     <?php } ?>
+                        
+                  
+                    
+                    
                 </table>
+                </div>
+                <div class="stok">
+                    
+                </div>
                 <hr>
-                <?php if($product['stock'] > 0){ ?>
-                <button class="btn rounded-pill btn-warning pl-5 pr-5" onclick="buy()">Beli</button>
-                <button class="btn rounded-pill btn-primary" onclick="addCart()">Tambah ke Keranjang</button>
-                <?php }else{ ?>
-                <p class="btn rounded-pill btn-outline-secondary">Stok lagi kosong</p>
-                <?php } ?>
-            </div>
-        </div>
-    </div>
-    <hr>
-    <div class="description">
-        <?= nl2br($product['description']); ?>
-    </div>
-    <hr>
-</div>
+                <div class="quant">Quantity :
+                    <div class="counter">
+                        <span class="down" onClick='decreaseCount(event, this)'>-</span>
+                        <input type="number" value="1" >
+                        <span class="up" onClick='increaseCount(event, this)'>+</span>
+                    </div>
+                </div>
 
+                <div class="kirim">
+                    <?php if($product['stock'] > 0){ ?>
+                    <button class="beli" onclick="buy()"><i class="fa-brands fa-whatsapp"></i> Beli Sekarang</button>
+                    <button class="keranjang" onclick="addCart()"><i class="fa-solid fa-cart-plus"></i> Keranjang</button>
+                    <?php }else{ ?>
+                        <p class="btn rounded-pill btn-outline-secondary">Stok lagi kosong</p>
+                        <?php } ?>
+                </div>
+            </div>
+        </section>
+        <section class="detail">
+            <div class="judul">Detail Produk</div>
+            <div class="ket">
+                Kondisi:
+                <?php if($product['condit'] == 1){ ?>
+                <td>Baru</td>
+                <?php }else{ ?>
+                    <td>Bekas</td>
+
+                <?php } ?><br>
+                Berat:
+                <?= $product['weight']; ?> gram
+                   
+                <?= nl2br($product['description']); ?>
+            </div>
+        </section>
+   
+
+</div>
+ </main>
 <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 <script>
     function plusProduct(price, stock){

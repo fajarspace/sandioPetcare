@@ -34,34 +34,30 @@
             </div>
         </div>
         <?php $setting = $this->db->get('settings')->row_array(); ?>
-        <div class="main-product">
+        <main class="container">
+        <div class="produk-list">
             <?php if($products->num_rows() > 0){ ?>
-            <?php foreach($products->result_array() as $p): ?>
+                <?php foreach($products->result_array() as $p): ?>
+            <div class="produk-box">
                 <a href="<?= base_url(); ?>p/<?= $p['slug']; ?>">
-                <div class="card">
-                    <img src="<?= base_url(); ?>assets/images/product/<?= $p['img']; ?>" class="card-img-top" >
-                    <div class="card-body">
-                    <?php if($setting['promo'] == 1){ ?>
-                    <?php if($p['promo_price'] == 0){ ?>
-                        <p class="card-text mb-0" style="-webkit-line-clamp: 3;"><?= $p['title']; ?></p>
-                        <p class="newPrice">Rp <?= str_replace(",",".",number_format($p['price'])); ?></p>
-                    <?php }else{ ?>
-                        <p class="card-text mb-0"><?= $p['title']; ?></p>
-                        <p class="oldPrice mb-0">Rp <?= str_replace(",",".",number_format($p['price'])); ?></p>
-                        <p class="newPrice">Rp <?= str_replace(",",".",number_format($p['promo_price'])); ?></p>
-                    <?php } ?>
-                    <?php }else{ ?>
-                        <p class="card-text mb-0" style="-webkit-line-clamp: 3;"><?= $p['title']; ?></p>
-                        <p class="newPrice">Rp <?= str_replace(",",".",number_format($p['price'])); ?></p>
-                    <?php } ?>
+                <div>
+                  <img src="<?= base_url(); ?>assets/images/product/<?= $p['img']; ?>" > 
+                    <div class="ket">
+                      <h2 ><?= $p['title']; ?></h2>
+                      <h3>Rp <?= str_replace(",",".",number_format($p['price'])); ?></h3>
+                        
                     </div>
                 </div>
                 </a>
+            </div>
             <?php endforeach; ?>
+        </div>
+
+        </div>
+        </main>
             <div class="clearfix"></div>
             <?php }else{ ?>
-                <div style="align-self: flex-start" class="alert alert-warning">Upss. Tidak ada produk yang dapat ditampilkan</div>
+                <div class="alert alert-warning">Upss. Tidak ada produk yang dapat ditampilkan</div>
             <?php } ?>
-        </div>
     </div>
 </div>

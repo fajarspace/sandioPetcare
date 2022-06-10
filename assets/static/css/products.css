@@ -1,150 +1,275 @@
-div.wrapper {
-	height: auto;
-	position: relative;
-	margin: auto;
-	margin-bottom: 70px;
-	margin-top: 30px;
-	width: 1200px;
+button {
+    outline-style: none;
+    border-style: none;
 }
 
-div.wrapper div.title-head {
-	background: linear-gradient(to right, #008cd7, #5ec7ff);
-	border-radius: 5px;
-	box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.1);
-	padding: 15px 30px;
-	width: 100%;
+.container-produk{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    padding: 0 20px;
+    margin: 5% auto;
+    width: 90%;
+    align-items: center;
 }
 
-div.wrapper div.title-head h2.title {
-	color: white;
-	font-size: 17px;
-	margin-bottom: 0;
+.produk{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    width: 100%;
+    min-height: 485px;
+    gap: 20px;
 }
 
-div.wrapper div.core {
-	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
-	margin: auto;
-	margin-top: 20px;
-	width: 1200px;
+.gambar{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    width: 400px;
+    height: 485px;
+    gap: 5px;
 }
 
-div.wrapper div.core div.filter {
-	align-self: flex-start;
-	border: 1px solid #ccc;
-	border-radius: 3px;
-	box-sizing: border-box;
-	height: auto;
-	padding-bottom: 10px;
-	width: 250px;
+.gambar-besar {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    width: 400px;
+    height: 400px;
+    border-radius: 20px;
 }
 
-div.wrapper div.core div.filter div.filter-main {
-	height: auto;
+.gambar-besar > .produk1 > img,
+.gambar-besar > .produk2 > img,
+.gambar-besar > .produk3 > img{
+    display: block;
+    width: 400px;
+    height: 400px;
+    object-fit: fill;
+    color: transparent;
+    display: none;
+    border-radius: 10px;
+}
+.gambar-besar > .produk1.aktif > img,
+.gambar-besar > .produk2.aktif > img,
+.gambar-besar > .produk3.aktif > img{
+    display: inline;
+    box-shadow: 0 0 0 3px #F8F8F8,
+                0 0 0 3.5px #E88D2F;
 }
 
-div.wrapper div.core div.filter div.top {
-	background-color: #e5e5e5;
-	box-sizing: border-box;
-	border-bottom: 1px solid #ccc;
-	height: auto;
-	width: 100%;
+.list-gambar{
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    overflow: hidden;
+    width: 100%;
+    height: max-content;
+    gap: 20px;
+    justify-content: center;
+    color: transparent;
 }
 
-div.wrapper div.core div.filter div.top p {
-	color: #333333;
-	font-family: "Nunito";
-	font-size: 18px;
-	margin-bottom: 0;
-	padding: 12px 17px;
+.list-gambar > .produk1,
+.list-gambar > .produk2,
+.list-gambar > .produk3{
+    padding: 12px 0;
 }
 
-div.wrapper div.core div.filter div.bodf {
-	box-sizing: border-box;
-	padding: 5px 15px;
+.list-gambar > .produk1 > img,
+.list-gambar > .produk2 > img,
+.list-gambar > .produk3 > img{
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    border-radius: 5px;
+    box-shadow: 0 0 0 3px #F8F8F8,
+                0 0 0 4px #cecece;
+    transition: .2s;
+}
+.list-gambar > .produk1 > img:hover,
+.list-gambar > .produk2 > img:hover,
+.list-gambar > .produk3 > img:hover{
+    box-shadow: 0 0 0 3px #F8F8F8,
+                0 0 0 4px #E88D2F;
 }
 
-div.wrapper div.core div.filter div.bodf p.title {
-	color: #444444;
-	font-family: "Open Sans";
-	font-size: 14px;
-	font-weight: 700;
-	margin-bottom: 7px;
-	margin-top: 10px;
+.list-gambar > .produk1.aktif > img,
+.list-gambar > .produk2.aktif > img,
+.list-gambar > .produk3.aktif > img{
+    box-shadow: 0 0 0 3px #F8F8F8,
+                0 0 0 5px #E88D2F;
 }
 
-div.wrapper div.core div.filter div.bodf a {
-	color: #666666;
-	display: block;
-	font-family: "Open Sans";
-	font-size: 14px;
-	margin: 2px 0;
+.harga {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    background: #fff;
+    box-shadow: 0 0 0 3px #F8F8F8,
+                0 0 0 3.5px #E88D2F;
+    border-radius: 10px;
+    padding: 12px;
+    font-family: 'Quicksand', sans-serif;
+    color: #444;
+    gap: 15px;
+    height: max-content;
 }
 
-div.wrapper div.core div.filter div.bodf a:hover {
-	color: #008cd7;
+.harga > .stok-status{
+    text-align: center;
+    width: 100%;
+    color: #fff;
+    font-weight: 500;
+    padding: 10px 0;
+    border-radius: 10px 10px 0 0;
 }
 
-div.wrapper div.core div.main-product {
-	align-self: flex-start;
-	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
-	margin-top: 20px;
-	position: relative;
-	width: 900px;
+.harga > .judul {
+    font-size: 22px;
+    font-weight: 700;
+    padding: 0 5px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #cecece;
 }
 
-div.wrapper div.core div.main-product div.card {
-	box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 6px 0px;
-	border-radius: 5px;
-	border: none;
-	height: auto;
-	margin: 0 10px;
-	margin-bottom: 10px;
-	width: 160px;
+.harga > .rp{
+    font-size: 28px;
+    font-weight: 700;
+    color: #FF1E00;
+    padding: 0 5px;
+    padding-bottom: 10px;
 }
 
-div.wrapper div.core div.main-product div.card:hover div.card-body p.card-text {
-	color: #008cd7;
+.harga > .stok{
+    padding: 0 5px;
+    padding-bottom: 10px;
+}
+.harga > .quant{
+    padding: 0 5px;
+    padding-bottom: 10px;
 }
 
-div.wrapper div.core div.main-product div.card div.card-body {
-	margin-top: 10px;
-	padding: 0;
+.quant{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 10px;
+}
+.counter {
+    display: flex;
+}
+.counter input {
+    width: 50px;
+    border: 0;
+    line-height: 20px;
+    font-size: 16px;
+    text-align: center;
+    background: transparent;
+    color: #E88D2F;
+    appearance: none;
+    outline: 0;
+    border: 1px solid #E88D2F;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 700;
+}
+.counter input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
 }
 
-div.wrapper div.core div.main-product div.card div.card-body p.card-text {
-	color: #333333;
-	font-size: 15px;
-	line-height: 22px;
-	overflow: hidden;
-	padding: 0 10px;
-	text-overflow: ellipsis;
-	display: -webkit-box;
-	-webkit-line-clamp: 2; /* number of lines to show */
-	-webkit-box-orient: vertical;
+.counter button {
+    display: block;
+    font-size: 20px;
+    padding: 2px 10px;
+    cursor: pointer;
+    color: #fff;
+    user-select: none;
+    background-color: #E88D2F;
+    transition: .2s;
+}
+.counter button:active{
+    color: #E88D2F;
+    background-color: #fff;
+    outline: 1px solid #E88D2F;
 }
 
-div.wrapper div.core div.main-product div.card div.card-body p.oldPrice {
-	color: #777777;
-	font-size: 14px;
-	margin-top: 5px;
-	text-decoration: line-through;
-	padding: 0 10px;
+.counter button:nth-child(1) {
+    border-radius: 5px 0 0 5px;
+}
+.counter button:nth-child(3) {
+    border-radius: 0 5px 5px 0;
 }
 
-div.wrapper div.core div.main-product div.card div.card-body p.newPrice {
-	color: #2c598a;
-	font-family: "Nunito";
-	font-size: 15px;
-	font-weight: 600;
-	padding: 0 10px;
-	margin-top: 5px;
+.harga > .kirim{
+    margin-top: 40px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 15px;
+    width: 100%;
+    height: max-content;
 }
 
-div.wrapper div.testi {
-	height: auto;
-	width: 100%;
+.harga > .kirim > .beli{
+    width: 50%;
+    font-size: 16px;
+    font-weight: 500;
+    background: #E88D2F;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+.harga > .kirim > .keranjang{
+    width: 50%;
+    font-size: 16px;
+    font-weight: 700;
+    background: #fff;
+    color: #E88D2F;
+    text-align: center;
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid #E88D2F;
+    cursor: pointer;
+}
+
+.detail{
+    width: 100%;
+    height: max-content;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background: #fff;
+    box-shadow: 0 0 0 3px #F8F8F8,
+                0 0 0 3.5px #E88D2F;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.detail > .judul{
+    font-family: 'Quicksand', sans-serif;
+    color: #444;
+    border-bottom: 1px solid #cecece;
+    padding: 15px 10px;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.detail > .ket > textarea{
+    width: 100%;
+    height: 500px;
+    resize: none;
+    outline-style: none;
+    border-style: none;
+    font-family: 'Quicksand', sans-serif;
+    color: #444;
+    padding: 0 10px;
+    line-height: 25px;
+    letter-spacing: 0.8px;
+    font-weight: 500;
+    font-size: 15px;
 }

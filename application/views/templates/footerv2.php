@@ -7,7 +7,7 @@ $footerhelp = $this->Settings_model->getFooterHelp();
 $footerinfo = $this->Settings_model->getFooterInfo();
 $rekening = $this->db->get('rekening');
  ?>
-            <footer>
+        <footer>
         <div class="footer-section">
             <h3>Ikuti kami :</h3>
                 <?php foreach($sosmed->result_array() as $s): ?>
@@ -17,12 +17,7 @@ $rekening = $this->db->get('rekening');
                 <?php endforeach; ?>
         </div>
         <div class="footer-row">
-            <div class="footer-col">
-                <li>
-                    <h2 class="brand-footer" style="color: <?= $this->config->item('default_color'); ?>"><?= $this->Settings_model->general()["app_name"]; ?></h2>
-                </li>
-                
-            </div>
+            
             <div class="footer-col">
                 <h4>Bantuan</h4>
                 <ul>
@@ -40,8 +35,11 @@ $rekening = $this->db->get('rekening');
                 </ul>
             </div>
             <div class="footer-col" >
-                <h4>@<script>document.write(new Date().getFullYear());</script></h4>
+                <h4>
+                    Copyright &copy; <script>document.write(new Date().getFullYear());</script> Sandio Petcare
+                </h4>
             </div>
+            
         </div>
     </footer>
 

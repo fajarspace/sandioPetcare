@@ -27,15 +27,6 @@ input[type="number"] {
 	-moz-appearance: textfield;
 }
 
-nav li {
-	margin: 5px;
-	color: white;
-}
-
-div.top-nav {
-	height: 33px;
-}
-
 i.icon-search-navbar {
 	cursor: pointer;
 	position: relative;

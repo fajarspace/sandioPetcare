@@ -63,14 +63,14 @@ class Categories extends CI_Controller {
 			$data['products'] = $this->Products_model->getAllProductsByCategory($cat, "");
 		}
 		$data['title'] = 'Kategori ' . $this->Categories_model->getNameCategoryBySlug($c) . ' - ' . $this->Settings_model->general()["app_name"];
-		$data['css'] = '';
-		$data['responsive'] = '';
+		$data['css'] = 'products';
+		$data['responsive'] = 'product-responsive';
         $data['slug'] = $c;
 		$data['nameCat'] = $this->Categories_model->getNameCategoryBySlug($c);
 		$this->load->view('templates/header', $data);
 		$this->load->view('templates/navbar');
 		$this->load->view('page/categories', $data);
-		$this->load->view('templates/footer');
+		$this->load->view('templates/footerv2');
 	}
 
 }

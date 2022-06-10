@@ -13,7 +13,9 @@
     <!-- jquery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 
-    <!-- js -->
+    <!-- page -->
+    <link rel="stylesheet" type="text/css" href="<?= base_url();  ?>assets/css/app.css">
+    <link rel="stylesheet" type="text/css" href="<?= base_url();  ?>assets/css/style.css">
 
     <!-- static css -->
     <link rel="stylesheet" type="text/css" href="<?= base_url();  ?>assets/static/css/nav.css">
