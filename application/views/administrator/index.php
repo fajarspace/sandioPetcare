@@ -181,9 +181,7 @@
     <?php $desc = $this->db->get('settings')->row_array(); ?>
     <div class="col-md-6 mb-3">
         <div class="card shadow">
-            <div class="card-header">
-                Tentang <?= $this->Settings_model->general()["app_name"]; ?>
-            </div>
+
             <div class="card-body">
                 <?= $desc['short_desc']; ?>
                 <hr>
