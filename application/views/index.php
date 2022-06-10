@@ -1,13 +1,9 @@
 <!-- Modal More Category -->
+<main class="container">
 <div class="modal fade" id="modalMoreCategory" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalCenterTitle">KATEGORI</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
+
       <div class="modal-body">
         <div class="main-category">
           <?php foreach($categories->result_array() as $c): ?>
@@ -25,7 +21,7 @@
 </div>
 
 <?php if($best->num_rows() > 0){ ?>
-<main class="container">
+
   <div class="header-produk" ><h1 >PRODUK TERLARIS</h1></div>
   <div class="produk-list">
   <?php foreach($best->result_array() as $p): ?>

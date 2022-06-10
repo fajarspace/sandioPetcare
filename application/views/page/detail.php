@@ -87,9 +87,9 @@
                         <tr>
                         <td>
                             <div class="counter">
-                            <button class="down" onclick="minusProduct(<?= $priceP; ?>)">-</button><!--
+                            <button  onclick="minusProduct(<?= $priceP; ?>)">-</button><!--
                         --><input disabled type="text" value="1" id="qtyProduct" class="valueJml"><!--
-                        --><button class="up" onclick="plusProduct(<?= $priceP; ?>, <?= $product['stock']; ?>)">+</button>
+                        --><button  onclick="plusProduct(<?= $priceP; ?>, <?= $product['stock']; ?>)">+</button>
                         </div>
                         </td>
                     </tr>
