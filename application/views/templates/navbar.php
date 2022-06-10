@@ -23,11 +23,13 @@ $settingss = $this->db->get('settings')->row_array();
             </li>
             <li class="nav-keranjang">
                 <a href="<?= base_url(); ?>cart">
-                    <div><?php if($this->cart->total_items() > 0){ ?>
-          <?= count($this->cart->contents()); ?>
-        <?php }else{ ?>
-            0
-        <?php } ?></div>
+                    <div>
+                    <?php if($this->cart->total_items() > 0){ ?>
+                    <?= count($this->cart->contents()); ?>
+                    <?php }else{ ?>
+                        0
+                    <?php } ?>
+                </div>
                     <i class="fa-solid fa-cart-shopping"></i>
                 </a>
             </li>

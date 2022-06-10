@@ -18,9 +18,19 @@ body{
 }
 a{
     text-decoration: none;
-    color: grey;
+    color: #E88D2F;
     font-size: 18px;
 }
+.link a{
+    font-family: 'Quicksand', sans-serif;
+    text-decoration: none;
+    color: #E88D2F;
+    font-size: 18px;
+}
+.darkmode .link a{
+    color: #F806CC;
+}
+
 ul{
     list-style: none;
 }
@@ -112,7 +122,7 @@ ul{
 .produk-box .ket h3 {
     font-family: 'Quicksand', sans-serif;
     font-size: 18px;
-    color: #A91079;
+    color: orange;
     margin-bottom: 8px;
 }
 .produk-box .ket div {

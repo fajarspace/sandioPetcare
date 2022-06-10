@@ -25,7 +25,7 @@
 <main class="container">
   <div style="display:flex; justify-content: space-between;" >
     <div class="header-produk"><h1>PRODUK TERBARU</h1></div>
-    <div class="link" ><a style="color: grey" href="<?= base_url(); ?>products">Lihat semua..</a></div>
+    <div class="link"><a href="<?= base_url(); ?>products">Lihat semua..</a></div>
   </div>
   <div class="produk-list">
   <?php foreach($recent->result_array() as $p): ?>

@@ -1,47 +1,64 @@
-div.wrapper {
+.container-cart{
+	font-family: 'Quicksand', sans-serif;
+	display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    position: relative;
+    max-width: 1000px;
+    min-height: 600px;
+    gap: 20px;
+    margin: 0 auto;
+}
+ul{
+    list-style: none;
+}
+a{
+	text-decoration: none;
+}
+div.wrapper-cart {
 	min-height: auto;
 	position: relative;
-	margin: auto;
-	margin-top: 30px;
+	margin: 0% auto;
 	width: 1100px;
 }
 
-div.wrapper div.navigation a {
+div.wrapper-cart div.navigation a {
 	font-size: 13px;
 }
 
-div.wrapper div.navigation i {
+div.wrapper-cart div.navigation i {
 	font-size: 15px;
 	position: relative;
 	margin: 0 1px;
 	top: 2px;
 }
 
-div.wrapper div.core {
+div.wrapper-cart div.core-cart {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
 }
 
-div.wrapper div.core div.product {
+div.wrapper-cart div.core-cart div.product {
 	height: auto;
 	margin-bottom: 70px;
 	width: 700px;
 }
 
-div.wrapper div.core div.product h3.title {
-	font-family: "Nunito";
+div.wrapper-cart div.core-cart div.product-cart h3.title {
+	font-family: 'Quicksand', sans-serif;
 	font-size: 20px;
 }
 
-div.wrapper div.core div.product div.item {
+div.wrapper-cart div.core-cart div.product-cart div.item {
 	box-sizing: border-box;
 	height: auto;
 	position: relative;
 	width: 100%;
 }
 
-div.wrapper div.core div.product div.item img {
+div.wrapper-cart div.core-cart div.product-cart div.item img {
 	border-radius: 5px;
 	float: left;
 	height: 95px;
@@ -50,9 +67,9 @@ div.wrapper div.core div.product div.item img {
 	width: 95px;
 }
 
-div.wrapper div.core div.product div.item h2.title {
+div.wrapper-cart div.core-cart div.product-cart div.item h2.title {
 	color: #222222;
-	font-family: "Open Sans";
+	font-family: 'Quicksand', sans-serif;
 	font-size: 16px;
 	font-weight: 600;
 }
@@ -61,40 +78,40 @@ div.clearfix {
 	clear: both;
 }
 
-div.wrapper div.core div.product div.item h3.price {
+div.wrapper-cart div.core-cart div.product-cart div.item h3.price {
 	color: tomato;
-	font-family: "Nunito";
+	font-family: 'Quicksand', sans-serif;
 	font-size: 18px;
 	font-weight: 700;
 	margin-top: 10px;
 }
 
-div.wrapper div.core div.product div.item p.note {
+div.wrapper-cart div.core-cart div.product-cart div.item p.note {
 	cursor: pointer;
 	display: inline-block;
 	margin-bottom: 0;
 }
 
-div.wrapper div.core div.product div.item input.inputNote {
+div.wrapper-cart div.core-cart div.product-cart div.item input.inputNote {
 	border: none;
 	border-bottom: 1px solid darksalmon;
 	color: #444444;
 	display: none;
-	font-family: "Open Sans";
+	font-family: 'Quicksand', sans-serif;
 	font-size: 15px;
 	outline: none;
 	padding: 5px 0;
 	width: 200px;
 }
 
-div.wrapper div.core div.product div.item i.fa-trash {
+div.wrapper-cart div.core-cart div.product-cart div.item i.fa-trash {
 	bottom: 0;
 	color: #777777;
 	position: absolute;
 	right: 10px;
 }
 
-div.wrapper div.core div.total {
+div.wrapper-cart div.core-cart div.total-cart {
 	align-self: flex-start;
 	border-radius: 5px;
 	/* box-shadow: 1px 2px 16px rgba(0, 0, 0, 0.1); */
@@ -107,71 +124,71 @@ div.wrapper div.core div.total {
 	width: 370px;
 }
 
-div.wrapper div.core div.total h2.title {
+div.wrapper-cart div.core-cart div.total-cart h2.title {
 	font-size: 18px;
-	font-family: "Open Sans";
+	font-family: 'Quicksand', sans-serif;
 	font-weight: 600;
 }
 
-div.wrapper div.core div.total div.list {
+div.wrapper-cart div.core-cart div.total-cart div.list {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
 }
 
-div.wrapper div.core div.total div.list p {
+div.wrapper-cart div.core-cart div.total-cart div.list p {
 	color: #333333;
-	font-family: "Nunito";
+	font-family: 'Quicksand', sans-serif;
 	font-size: 15px;
 	margin-bottom: 5px;
 }
 
 @media screen and (max-width: 1150px) {
-	div.wrapper {
+	div.wrapper-cart {
 		width: 900px;
 	}
 
-	div.wrapper div.core div.product {
+	div.wrapper-cart div.core-cart div.product-cart {
 		width: 500px;
 	}
 
-	div.wrapper div.core div.product div.item h2.title {
+	div.wrapper-cart div.core-cart div.product-cart div.item h2.title {
 		font-size: 14px;
 	}
 
-	div.wrapper div.core div.product div.item h3.price {
+	div.wrapper-cart div.core-cart div.product-cart div.item h3.price {
 		font-size: 15px;
 	}
 
-	div.wrapper div.core div.total {
+	div.wrapper-cart div.core-cart div.total-cart {
 		width: 350px;
 	}
 
-	div.wrapper div.core div.total h2.title {
+	div.wrapper-cart div.core-cart div.total-cart h2.title {
 		font-size: 16px;
 	}
 
-	div.wrapper div.core div.total div.list p {
+	div.wrapper-cart div.core-cart div.total-cart div.list p {
 		font-size: 14px;
 	}
 }
 
 @media screen and (max-width: 950px) {
-	div.wrapper {
+	div.wrapper-cart {
 		width: 90%;
 	}
 
-	div.wrapper div.core {
+	div.wrapper-cart div.core-cart {
 		display: block;
 	}
 
-	div.wrapper div.core div.product {
+	div.wrapper-cart div.core-cart div.product-cart {
 		display: block;
 		margin-bottom: 30px;
 		width: 100%;
 	}
 
-	div.wrapper div.core div.total {
+	div.wrapper-cart div.core-cart div.product-cart div.total-cart {
 		display: block;
 		width: 100%;
 	}

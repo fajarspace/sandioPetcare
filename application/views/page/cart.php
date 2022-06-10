@@ -1,11 +1,12 @@
-<div class="wrapper">
+<main class="container-cart" >
+<div class="wrapper-cart">
     <div class="navigation">
         <a href="<?= base_url(); ?>">Home</a>
         <i class="fa fa-caret-right"></i>
         <a>Troli</a>
     </div>
-    <div class="core mt-4">
-        <div class="product">
+    <div class="core-cart">
+        <div class="product-cart">
             <?php if($this->cart->total_items() > 0){ ?>
             <?php foreach($this->cart->contents() as $item): ?>
             <div class="item">
@@ -31,7 +32,7 @@
                 <br><br><br>
             <?php } ?>
         </div>
-        <div class="total shadow">
+        <div class="total-cart shadow">
             <h2 class="title">Ringkasan Belanja</h2>
             <hr>
             <div class="list">
@@ -95,7 +96,7 @@
         </div>
     </div>
 </div>
-
+</main>
 
 <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 <script>

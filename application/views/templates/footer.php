@@ -1,9 +1,19 @@
+<?php
+$categoriesLimit = $this->Categories_model->getCategoriesLimit();
+$setting = $this->Settings_model->getSetting();
+$sosmed = $this->Settings_model->getSosmed();
+$footerhelp = $this->Settings_model->getFooterHelp();
+$footerinfo = $this->Settings_model->getFooterInfo();
+$rekening = $this->db->get('rekening');
+ ?>
     <footer>
         <div class="footer-section">
             <h3>Ikuti kami :</h3>
-            <a href="#"><div><i class="fa-brands fa-facebook-f"></i></div></a>
-            <a href="#"><div><i class="fa-brands fa-instagram"></i></div></a>
-            <a href="#"><div><i class="fa-brands fa-whatsapp"></i></div></a>
+                <?php foreach($sosmed->result_array() as $s): ?>
+                  <a href="<?= $s['link']; ?>" target="_blank" title="<?= $s['name']; ?>">
+                    <div><i class="fab fa-<?= $s['icon']; ?>"></i></div>
+                  </a>
+                <?php endforeach; ?>
         </div>
         <div class="footer-section">
             &copy; 2022 copyright <strong>sandio petcare</strong>

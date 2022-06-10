@@ -1,6 +1,7 @@
+<main class="container-payment">
 <form action="<?= base_url(); ?>payment/succesfully" method="post">
-<div class="wrapper">
-    <div class="core">
+<div class="wrapper-payment">
+    <div class="core-payment">
         <?php if($this->cart->total_items() > 0){ ?>
         <div class="products">
             <table class="table">
@@ -133,3 +134,4 @@
     </div>
 </div>
 </form>
+</main>

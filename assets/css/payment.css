@@ -1,4 +1,16 @@
-div.wrapper {
+.container-payment{
+	font-family: 'Quicksand', sans-serif;
+	display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    position: relative;
+    max-width: 1000px;
+    min-height: 600px;
+    gap: 20px;
+    margin: 0 auto;
+}
+div.wrapper-payment {
 	display: flex;
 	flex-direction: row;
 	height: auto;
@@ -10,12 +22,12 @@ div.wrapper {
 	width: 1100px;
 }
 
-div.wrapper div.core {
+div.wrapper-payment div.core-payment {
 	height: auto;
 	width: 650px;
 }
 
-div.wrapper div.core div.line {
+div.wrapper-payment div.core-payment div.line {
 	background-color: #dddddd;
 	border-radius: 20px;
 	height: 3px;
@@ -23,20 +35,20 @@ div.wrapper div.core div.line {
 	width: 100%;
 }
 
-div.wrapper div.core div.products {
+div.wrapper-payment div.core-payment div.products {
 	width: 100%;
 }
 
-div.wrapper div.core div.products table {
+div.wrapper-payment div.core-payment div.products table {
 	border: none;
 }
 
-div.wrapper div.address h2.title {
+div.wrapper-payment div.address h2.title {
 	color: #333333;
 	font-size: 20px;
 }
 
-div.wrapper div.total {
+div.wrapper-payment div.total {
 	align-self: flex-start;
 	border-radius: 5px;
 	/* box-shadow: 1px 2px 16px rgba(0, 0, 0, 0.1); */
@@ -49,7 +61,7 @@ div.wrapper div.total {
 	width: 410px;
 }
 
-div.wrapper div.total {
+div.wrapper-payment div.total {
 	align-self: flex-start;
 	border-radius: 5px;
 	/* box-shadow: 1px 2px 16px rgba(0, 0, 0, 0.1); */
@@ -63,47 +75,47 @@ div.wrapper div.total {
 	width: 400px;
 }
 
-div.wrapper h2.title {
+div.wrapper-payment h2.title {
 	font-size: 18px;
-	font-family: "Open Sans";
+	font-family: 'Quicksand', sans-serif;
 	font-weight: 600;
 }
 
-div.wrapper div.total div.list {
+div.wrapper-payment div.total div.list {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
 }
 
-div.wrapper div.total div.list p {
+div.wrapper-payment div.total div.list p {
 	color: #333333;
-	font-family: "Nunito";
+	font-family: 'Quicksand', sans-serif;
 	font-size: 15px;
 	margin-bottom: 5px;
 }
 
 @media screen and (max-width: 1150px) {
-	div.wrapper {
+	div.wrapper-payment {
 		width: 900px;
 	}
 
-	div.wrapper div.core {
+	div.wrapper-payment div.core-payment {
 		width: 450px;
 	}
 }
 
 @media screen and (max-width: 950px) {
-	div.wrapper {
+	div.wrapper-payment {
 		display: block;
 		width: 90%;
 	}
 
-	div.wrapper div.core {
+	div.wrapper-payment div.core-payment {
 		display: block;
 		width: 100%;
 	}
 
-	div.wrapper div.total {
+	div.wrapper-payment div.total {
 		display: block;
 		width: 100%;
 	}

@@ -26,24 +26,24 @@ body.darkmode a{
 
 }
 .darkmode .nav-formsearch form input{
-	border: 2px solid #871e5f;
+	border: 2px solid #F806CC;
 }
 .darkmode .nav-keranjang i{
-    color: #871e5f;
+    color: #F806CC;
 }
 .darkmode .nav-keranjang a div{
 
-    background: #871e5f;
+    background: #F806CC;
     border: .5px solid rgb(40, 40, 40);
 }
 .darkmode .nav-hamburger i{
-	color: #871e5f;
+	color: #F806CC;
 }
 .darkmode .nav-kategori div h2{
-	color: #A91079;
+	color: #F806CC;
 }
 .darkmode .header-produk h1{
-	color: #A91079;
+	color: #F806CC;
 }
 
 .darkmode .list-kategori ul{
@@ -51,10 +51,10 @@ body.darkmode a{
     background: rgb(40, 40, 40);
 }
 .darkmode .list-kategori ul a{
-    color: #A91079;
+    color: #F806CC;
 }
 .darkmode .list-kategori ul a:hover{
-    background: #A91079;
+    background: #F806CC;
     color: white;
     
 }
@@ -67,10 +67,10 @@ body.darkmode a{
     }
     .darkmode .list-kategori-mobile ul a{
 
-        color: #A91079;
+        color: #F806CC;
     }
     .darkmode .list-kategori-mobile ul a:hover{
-        background: #A91079;
+        background: #F806CC;
         color: white;
     }
 
@@ -85,7 +85,7 @@ body.darkmode a{
 	color: rgb(227, 227, 227);
 }
 .darkmode .produk-box h3{
-	color: #E88D2F;
+	
 }
 .darkmode .produk-box a:hover {
 	box-shadow: 0 3px 8px 3px rgb(30, 30, 30), 0 6px 20px 0 rgb(40, 40, 40);
@@ -102,7 +102,6 @@ body.darkmode a{
 }
 .darkmode .footer-section div{
     background: #A91079;
-
 }
 .darkmode .footer-section div:hover {
     color: #A91079;
