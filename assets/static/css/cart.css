@@ -83,13 +83,16 @@ div.wrapper-cart div.navigation i {
 	display: flex;
 	flex-direction: column;
 	flex-wrap: nowrap;
-	gap: 8px;
+	gap: 5px;
 	width: 100%;
 }
 
 .core-cart > .product-cart > .item-main div > .nama-barang{
 	font-size: 10px;
 	color: #222;
+	height: 37px;
+	overflow-x: hidden;
+	width: 100%;
 }
 
 .core-cart > .product-cart > .item-main div > .text-muted{
@@ -287,5 +290,34 @@ div.wrapper-cart div.navigation i {
 @media screen and (max-width: 900px) {
 	.total-cart {
 		width: 400px;
+	}
+}
+@media screen and (max-width: 768px) {
+	.container-cart{
+		flex-direction: column;
+		width: 95vw;
+		min-height: 50vh;
+		gap: 1px;
+		margin: 70px auto;
+	}
+	.total-cart {
+		margin-top: 35px;
+		width: 100%;
+		height: max-content;
+		background-color: #fff;
+		border-radius: 5px;
+		box-shadow: -2px 2px 3px #d1d1d1;
+		padding: 15px;
+		display: flex;
+		flex-direction: column;
+		gap: 15px;
+		flex-wrap: nowrap;
+	}
+	.core-cart > .product-cart > .item-main div > .nama-barang{
+		font-size: 10px;
+		color: #222;
+		height: 37px;
+		overflow-x: hidden;
+		width: 100%;
 	}
 }
