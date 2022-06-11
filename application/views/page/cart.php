@@ -32,31 +32,30 @@
                 </div>
             </div>
             <?php endforeach; ?>
-            <a href="<?= base_url(); ?>cart/delete_cart" onclick="return confirm('Apakah Anda yakin akan mengosongkan Troli?')"><button class="btn rounded-pill btn-outline-dark">Kosongkan Troli</button></a>
+            <a class="deleteall" href="<?= base_url(); ?>cart/delete_cart" onclick="return confirm('Apakah Anda yakin akan mengosongkan Troli?')"><button class="btn rounded-pill btn-outline-dark"><i class="fa-solid fa-trash"></i> Hapus Semua</button></a>
             <?php }else{ ?>
-                <div class="alert alert-warning">Upss. Troli masih kosong. Yuk belanja terlebih dahulu..</div>
+                <div class="alert alert-warning">Upss.. Keranjang Masih Kosong. Yuk Belanja Terlebih Dahulu...!</div>
                 <br><br><br>
             <?php } ?>
         </div>
     </div>
 </div>
-
 <div class="total-cart shadow">
     <h2 class="title">Ringkasan Belanja</h2>
     <div class="list">
-        <p>Total Jumlah Barang</p>
-        <p><?= $this->cart->total_items(); ?></p>
+        <p>Total Jumlah</p>
+        <p>(<?= $this->cart->total_items(); ?> Barang)</p>
     </div>
     <div class="list">
-        <p>Total Harga Barang</p>
+        <p>Total Tagihan</p>
         <p>Rp <?= number_format($this->cart->total(),0,",","."); ?></p>
     </div>
     <?php if($this->cart->total_items() > 0){ ?>
-        <a href="<?= base_url(); ?>payment">
-            <button class="btn rounded-pill btn-dark btn-block mt-2">Lanjut ke Pembayaran</button>
+        <a href="<?= base_url(); ?>payment" class="lanjut">
+            <button class="btn rounded-pill btn-dark btn-block mt-2">Lanjut Pembayaran</button>
         </a>
     <?php }else{ ?>
-        <a href="<?= base_url(); ?>">
+        <a href="<?= base_url(); ?>" class="belanja">
             <button class="btn rounded-pill btn-dark btn-block mt-2">Belanja Dulu</button>
         </a>
     <?php } ?>

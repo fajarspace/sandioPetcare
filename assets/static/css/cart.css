@@ -2,14 +2,12 @@
 	font-family: 'Quicksand', sans-serif;
 	color: #444;
 	display: flex;
-    flex-direction: column;
+    flex-direction: row;
     flex-wrap: nowrap;
     position: relative;
-    width: 100%;
-    min-height: 600px;
-    gap: 20px;
+	width: 60vw;
+    gap: 5px;
     margin: 50px auto;
-	border: 1px solid #000;
 	padding: 10px 0;
 }
 ul{
@@ -22,8 +20,7 @@ div.wrapper-cart {
 	min-height: auto;
 	position: relative;
 	margin: 0 auto;
-	width: 1200px;
-	
+	width: 100%;
 }
 
 div.wrapper-cart div.navigation{
@@ -46,9 +43,8 @@ div.wrapper-cart div.navigation i {
 	color: #9FA6B0;
 }
 
-.core-cart{
+.wrapper-cart > .core-cart{
 	width: 100%;
-	height: 100%;
 	padding: 0 10px;
 }
 
@@ -64,10 +60,10 @@ div.wrapper-cart div.navigation i {
 	display: flex;
 	flex-direction: row;
 	flex-wrap: nowrap;
-	width: 70%;
+	width: 100%;
 	height: max-content;
 	background-color: #fff;
-	box-shadow: -3px 3px 5px #b5b5b5;
+	box-shadow: -3px 3px 5px #d1d1d1;
 	border-radius: 5px;
 	gap: 15px;
 	padding: 10px;
@@ -77,6 +73,9 @@ div.wrapper-cart div.navigation i {
 	width: 100px;
 	height: 100px;
 	object-fit: fill;
+	color: transparent;
+	align-items: center;
+	background-color: #cecece;
 }
 
 .core-cart > .product-cart > .item-main div{
@@ -126,7 +125,7 @@ div.wrapper-cart div.navigation i {
 	transition: 0.2s;
 }
 .core-cart > .product-cart > .item-main div > .aksi small a:hover{
-	box-shadow: -2px 2px 3px #b5b5b5;
+	box-shadow: -2px 2px 3px #d1d1d1;
 	background: #E88D2F;
 	color: #fff;
 	text-decoration: none;
@@ -138,7 +137,7 @@ div.wrapper-cart div.navigation i {
 	font-size: 14px;
 	padding: 5px 8px;
 	border-radius: 50%;
-	box-shadow: -2px 2px 3px #b5b5b5;
+	box-shadow: -2px 2px 3px #d1d1d1;
 	position: relative;
 	transition: 0.3s;
 }
@@ -146,17 +145,119 @@ div.wrapper-cart div.navigation i {
 	background-color: #fff;
 	color: #E88D2F;
 }
+.core-cart > .product-cart > .alert-warning{
+	position: relative;
+	top: 20px;
+	left: 10px;
+	width: max-content;
+	text-align: center;
+	background-color: #D9534F;
+	color: #fff;
+	box-shadow: -2px 2px 3px #d1d1d1;
+	padding: 15px;
+	font-weight: 700;
+	border-radius: 0 20px 20px 20px;
+}
 
+.core-cart > .product-cart > .deleteall {
+	width: max-content;
+}
+
+.core-cart > .product-cart > .deleteall > button{
+	width: 125px;
+	text-align: center;
+	padding: 10px 1px;
+	color: #D9534F;
+	background: transparent;
+	font-family: 'Quicksand', sans-serif;
+	border-radius: 10px;
+	font-size: 14px;
+	font-weight: 500;
+	cursor: pointer;
+}
+.core-cart > .product-cart > .deleteall > button:hover{
+	box-shadow: -2px 2px 3px #d1d1d1;
+	background-color: #D9534F;
+	color: #fff;
+}
 
 .total-cart {
-	width: 350px;
+	margin-top: 35px;
+	width: 500px;
 	height: max-content;
 	background-color: #fff;
 	border-radius: 5px;
-	box-shadow: 0 0 3px #d1d1d1;
-	padding: 10px;
+	box-shadow: -2px 2px 3px #d1d1d1;
+	padding: 15px;
 	display: flex;
 	flex-direction: column;
-	gap: 8px;
+	gap: 15px;
 	flex-wrap: nowrap;
+}
+
+.total-cart > .title{
+	font-size: 20px;
+	color: #222;
+	font-weight: 700;
+}
+
+.total-cart > .list{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+	font-size: 15px;
+	font-weight: 600;
+}
+.total-cart > .list:nth-child(3){
+	margin-top: 20px;
+	padding-top: 10px;
+	border-top: 1px solid #cecece;
+}
+.total-cart > .list:nth-child(3) > p:nth-child(2){
+	color: #FF1E00;
+	font-size: 18px;
+	font-weight: 700;
+}
+
+.total-cart > .belanja,
+.total-cart > .lanjut{
+	margin-top: 15px;
+}
+
+.total-cart > .lanjut > button{
+	width: 100%;
+	padding: 10px;
+	text-align: center;
+	background-color: #5BB75B;
+	border-radius: 5px;
+	cursor: pointer;
+	font-size: 15px;
+	font-weight: 700;
+	color: #fff;
+	font-family: 'Quicksand', sans-serif;
+}
+.total-cart > .lanjut > button:hover{
+	box-shadow: -2px 2px 3px #d1d1d1;
+}
+
+
+.total-cart > .belanja > button{
+	width: 100%;
+	padding: 10px;
+	text-align: center;
+	background-color: #cecece;
+	border-radius: 5px;
+	cursor: pointer;
+	font-size: 15px;
+	font-weight: 700;
+	color: #fff;
+	font-family: 'Quicksand', sans-serif;
+}
+
+
+
+
+.modal{
+	display: none;
 }
