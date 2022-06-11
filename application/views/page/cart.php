@@ -9,22 +9,28 @@
         <div class="product-cart">
             <?php if($this->cart->total_items() > 0){ ?>
             <?php foreach($this->cart->contents() as $item): ?>
-            <div class="item">
-                <div class="item-main">
-                    <img src="<?= base_url(); ?>assets/images/product/<?= $item['img']; ?>" alt="">
-                    <a href="<?= base_url(); ?>p/<?= $item['slug']; ?>"><h2 class="title mb-0"><?= $item['name']; ?></h2></a>
+            <div class="item-main">
+                <img src="<?= base_url(); ?>assets/images/product/<?= $item['img']; ?>" alt="">
+                <div>
+                    <a class="nama-barang" href="<?= base_url(); ?>p/<?= $item['slug']; ?>"><h2 class="title mb-0"><?= $item['name']; ?></h2></a>
                     <small class="text-muted">Jumlah: <?= $item['qty']; ?></small>
                     <h3 class="price mt-0 mb-0">Rp <?= number_format($item['subtotal'],0,",","."); ?></h3>
-                    <?php if($item['ket'] == ''){ ?>
-                        <small class="desc_product_<?= $item['rowid']; ?>"><a href="#" class="text-dark" data-toggle="modal" data-target="#modalAddDescription" onclick="showModalAddKet('<?= $item['rowid']; ?>')">Tambah keterangan</a></small>
-                    <?php }else{ ?>
-                        <small class="desc_product_<?= $item['rowid']; ?>">Ket: <?= $item['ket']; ?> <a href="#" class="text-dark" data-toggle="modal" data-target="#modalEditDescription" onclick="showModalEditKet('<?= $item['rowid']; ?>')"><i class="fa text-info fa-edit"></i></a></small>
-                    <?php } ?>
-                    <div class="clearfix"></div>
+                    <div class="aksi">
+                        <?php if($item['ket'] == ''){ ?>
+                            <small class="desc_product_<?= $item['rowid']; ?>">
+                                <a href="#" class="text-dark" data-toggle="modal" data-target="#modalAddDescription" onclick="showModalAddKet('<?= $item['rowid']; ?>')">tulis catatan</a>
+                            </small>
+                        <?php }else{ ?>
+                            <small class="desc_product_<?= $item['rowid']; ?>">Ket: <?= $item['ket']; ?>
+                                <a href="#" class="text-dark" data-toggle="modal" data-target="#modalEditDescription" onclick="showModalEditKet('<?= $item['rowid']; ?>')">
+                                    <i class="fa text-info fa-edit"></i>
+                                </a>
+                            </small>
+                        <?php } ?>
+                        <a class="delete-item" href="<?= base_url(); ?>cart/delete/<?= $item['rowid']; ?>" onclick="return confirm('Yakin ingin menghapus produk ini dari troli?')"><i class="fa fa-trash"></i></a>
+                    </div>
                 </div>
-                <a href="<?= base_url(); ?>cart/delete/<?= $item['rowid']; ?>" onclick="return confirm('Yakin ingin menghapus produk ini dari troli?')"><i class="fa fa-trash"></i></a>
             </div>
-            <hr>
             <?php endforeach; ?>
             <a href="<?= base_url(); ?>cart/delete_cart" onclick="return confirm('Apakah Anda yakin akan mengosongkan Troli?')"><button class="btn rounded-pill btn-outline-dark">Kosongkan Troli</button></a>
             <?php }else{ ?>
@@ -32,30 +38,29 @@
                 <br><br><br>
             <?php } ?>
         </div>
-        <div class="total-cart shadow">
-            <h2 class="title">Ringkasan Belanja</h2>
-            <hr>
-            <div class="list">
-                <p>Total Jumlah Barang</p>
-                <p><?= $this->cart->total_items(); ?></p>
-            </div>
-            <div class="list">
-                <p>Total Harga Barang</p>
-                <p>Rp <?= number_format($this->cart->total(),0,",","."); ?></p>
-            </div>
-            <?php if($this->cart->total_items() > 0){ ?>
-                <a href="<?= base_url(); ?>payment">
-                    <button class="btn rounded-pill btn-dark btn-block mt-2">Lanjut ke Pembayaran</button>
-                </a>
-            <?php }else{ ?>
-                <a href="<?= base_url(); ?>">
-                    <button class="btn rounded-pill btn-dark btn-block mt-2">Belanja Dulu</button>
-                </a>
-            <?php } ?>
-        </div>
     </div>
 </div>
 
+<div class="total-cart shadow">
+    <h2 class="title">Ringkasan Belanja</h2>
+    <div class="list">
+        <p>Total Jumlah Barang</p>
+        <p><?= $this->cart->total_items(); ?></p>
+    </div>
+    <div class="list">
+        <p>Total Harga Barang</p>
+        <p>Rp <?= number_format($this->cart->total(),0,",","."); ?></p>
+    </div>
+    <?php if($this->cart->total_items() > 0){ ?>
+        <a href="<?= base_url(); ?>payment">
+            <button class="btn rounded-pill btn-dark btn-block mt-2">Lanjut ke Pembayaran</button>
+        </a>
+    <?php }else{ ?>
+        <a href="<?= base_url(); ?>">
+            <button class="btn rounded-pill btn-dark btn-block mt-2">Belanja Dulu</button>
+        </a>
+    <?php } ?>
+</div>
 
 <!-- Modal -->
 <div class="modal fade" id="modalEditDescription" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
