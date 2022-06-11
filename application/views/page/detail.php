@@ -8,42 +8,45 @@
         <a><?= $product['title']; ?></a>
     </div>
     <?php $setting = $this->db->get('settings')->row_array(); ?>
-    
+
         <section class="produk">
             <div class="gambar">
 
 
                 <div class="gambar-besar">
                     <div class="produk1 aktif">
-                        
+
                             <img src="<?= base_url(); ?>assets/images/product/<?= $product['img']; ?>" alt="produk">
-                        
+
                     </div>
+                    <?php foreach($img->result_array() as $d): ?>
                     <div class="produk2">
                         <img src="<?= base_url(); ?>assets/images/product/<?= $product['img']; ?>" alt="gambar" class="thumb">
-                    <?php foreach($img->result_array() as $d): ?>
+
                         <img src="<?= base_url(); ?>assets/images/product/<?= $d['img']; ?>" alt="gambar" class="thumb">
-                    <?php endforeach; ?>
+
                     </div>
+                    <?php endforeach; ?>
                 </div>
                 <div class="list-gambar">
                     <div class="produk1 aktif">
-                        <?php if($d['produk_foto1'] == ""){ ?>
+                        <?php if($product['img'] == ""){ ?>
                             <img src="assets/img/produk/noimage.png">
                         <?php }else{ ?>
-                            <img src="<?= base_url(); ?>assets/images/product/<?= $d['img']; ?>" alt="produk">
+                            <img src="<?= base_url(); ?>assets/images/product/<?= $product['img']; ?>" alt="produk">
                         <?php } ?>
                     </div>
+                    <?php foreach($img->result_array() as $d): ?>
                     <div class="produk2">
-                        <?php if($d['img'] == ""){
-                            ?><script>
-                            $(".produk2").css("display", "none");
-                            </script><?php
-                            false; 
-                            }else{ ?>
-                            <img src="assets/img/produk/<?= $d['img'] ?>">
-                        <?php } ?>
+
+                      <?php if($d['img'] == ""){ ?>
+                          <img src="assets/img/produk/noimage.png">
+                      <?php }else{ ?>
+                          <img src="<?= base_url(); ?>assets/images/product/<?= $d['img']; ?>" alt="produk">
+                      <?php } ?>
+
                     </div>
+                    <?php endforeach; ?>
                     <div class="produk3">
                         <?php if($d['produk_foto3'] == ""){
                             ?><script>
@@ -75,7 +78,7 @@
                 <div class="judul"><?= $product['title']; ?></div>
                 <p class="subtitle">Terjual <?= $product['transaction']; ?> Produk &bull; <?= $product['viewer']; ?>x Dilihat</p>
                 <hr>
-                
+
                     <br>
                     <tr>
                         <td class="t">Stok Tersedia:</td>
@@ -97,14 +100,14 @@
                             <td class="price">Rp <?= str_replace(",",".",number_format($product['price'])); ?></td>
                         </tr>
                     <?php } ?>
-                        
-                  
-                    
-                    
+
+
+
+
                 </table>
                 </div>
                 <div class="stok">
-                    
+
                 </div>
                 <hr>
                 <div class="quant">Quantity :
@@ -137,11 +140,11 @@
                 <?php } ?><br>
                 Berat:
                 <?= $product['weight']; ?> gram
-                   
+
                 <?= nl2br($product['description']); ?>
             </div>
         </section>
-   
+
 
 </div>
  </main>
@@ -243,12 +246,12 @@
     const jumboImgProduct = document.querySelector("div.wrapper div.top div.main-top div.img img.jumbo-thumb");
     const jumboHrefImgProduct = document.querySelector("div.wrapper div.top div.main-top div.img a");
     const thumbsImgProduct = document.querySelectorAll("div.wrapper div.top div.main-top div.img div.img-slider img.thumb");
-    
+
     containerImgProduct.addEventListener('click', function(e){
         if(e.target.className == 'thumb'){
             jumboImgProduct.src = e.target.src;
             jumboHrefImgProduct.href = e.target.src;
-            
+
             thumbsImgProduct.forEach(function(thumb){
                 thumb.className = 'thumb';
             })
