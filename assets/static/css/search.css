@@ -29,7 +29,8 @@ div.wrapper div.core {
 
 div.wrapper div.core div.filter {
 	align-self: flex-start;
-	border: 1px solid #ccc;
+	box-shadow: 0 3px 4px 3px lightgrey, 0 6px 20px 0 #EEEEEE;
+	background-color: #ffffff;
 	border-radius: 3px;
 	box-sizing: border-box;
 	height: auto;
@@ -42,7 +43,7 @@ div.wrapper div.core div.filter div.filter-main {
 }
 
 div.wrapper div.core div.filter div.top {
-	background-color: #e5e5e5;
+	background-color: lightgrey;
 	box-sizing: border-box;
 	border-bottom: 1px solid #ccc;
 	height: auto;
@@ -50,8 +51,8 @@ div.wrapper div.core div.filter div.top {
 }
 
 div.wrapper div.core div.filter div.top p {
-	color: #333333;
-	font-family: "Nunito";
+	color: #000000;
+	font-family: 'Quicksand', sans-serif;
 	font-size: 18px;
 	margin-bottom: 0;
 	padding: 12px 17px;
@@ -60,11 +61,12 @@ div.wrapper div.core div.filter div.top p {
 div.wrapper div.core div.filter div.bodf {
 	box-sizing: border-box;
 	padding: 5px 15px;
+	font-family: 'Quicksand', sans-serif;
 }
 
 div.wrapper div.core div.filter div.bodf p.title {
 	color: #444444;
-	font-family: "Open Sans";
+	font-family: 'Quicksand', sans-serif;
 	font-size: 14px;
 	font-weight: 700;
 	margin-bottom: 7px;
@@ -74,13 +76,13 @@ div.wrapper div.core div.filter div.bodf p.title {
 div.wrapper div.core div.filter div.bodf a {
 	color: #666666;
 	display: block;
-	font-family: "Open Sans";
+	font-family: 'Quicksand', sans-serif;
 	font-size: 14px;
 	margin: 2px 0;
 }
 
 div.wrapper div.core div.filter div.bodf a:hover {
-	color: #008cd7;
+	color: #E88D2F;
 }
 
 div.wrapper div.core div.main-product {
@@ -134,7 +136,7 @@ div.wrapper div.core div.main-product div.card div.card-body p.oldPrice {
 
 div.wrapper div.core div.main-product div.card div.card-body p.newPrice {
 	color: #2c598a;
-	font-family: "Nunito";
+	font-family: 'Quicksand', sans-serif;
 	font-size: 15px;
 	font-weight: 600;
 	padding: 0 10px;

@@ -190,7 +190,7 @@ div.wrapper-cart div.navigation i {
 	height: max-content;
 	background-color: #fff;
 	border-radius: 5px;
-	box-shadow: 0 0 5px #d1d1d1;
+	box-shadow: 0 3px 8px 3px lightgrey, 0 6px 20px 0 #EEEEEE;
 	padding: 15px;
 	display: flex;
 	flex-direction: column;

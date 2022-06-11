@@ -21,6 +21,36 @@ body.darkmode a{
 	background: rgb(57, 57, 57);
 	box-shadow: 0 0 5px #282828;
 }
+
+/* SEARCH*/
+/* SEARCH*/
+.darkmode div.wrapper div.title-head {
+	background: linear-gradient(to right, #A91079, #E88D2F);
+	box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.1);
+}
+.darkmode div.wrapper div.core div.filter div.top {
+	background-color: grey;
+	border-bottom: 1px solid #ccc;
+}
+.darkmode div.wrapper div.core div.filter div.top p {
+	color: #ffffff;
+}
+.darkmode div.wrapper div.core div.filter div.bodf p.title {
+	color: #ffffff;
+}
+.darkmode div.wrapper div.core div.filter div.bodf a {
+	color: lightgrey;
+}
+.darkmode div.wrapper div.core div.filter div.bodf a:hover {
+	color: #F806CC;
+}
+.darkmode div.wrapper div.core div.filter {
+	background: rgb(57, 57, 57);
+  box-shadow: 0 4px 8px 0 #282828, 0 6px 20px 0 rgb(57, 57, 57);
+}
+
+/* FORM SEARCH*/
+/* FORM SEARCH*/
 .darkmode .nav-formsearch form button{
     color: rgb(227, 227, 227);
 
@@ -84,7 +114,7 @@ body.darkmode a{
 .darkmode .produk-box{
 	color: rgb(227, 227, 227);
 	background: rgb(57, 57, 57);
-  	box-shadow: 0 4px 8px 0 #282828, 0 6px 20px 0 rgb(57, 57, 57);
+  box-shadow: 0 4px 8px 0 #282828, 0 6px 20px 0 rgb(57, 57, 57);
 }
 .darkmode .produk-box h2{
 	color: rgb(227, 227, 227);
@@ -126,7 +156,7 @@ body.darkmode a{
 .darkmode .total-cart {
   color: rgb(227, 227, 227);
 	background: rgb(57, 57, 57);
-	box-shadow: 0 0 5px #282828;
+	box-shadow: 0 4px 8px 0 #282828, 0 6px 20px 0 rgb(57, 57, 57);
 }
 .darkmode .total-cart > .title{
 	color: rgb(227, 227, 227);
