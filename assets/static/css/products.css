@@ -4,47 +4,105 @@ button {
 }
 
 .container-produk{
+    font-family: 'Quicksand', sans-serif;
+	color: #444;
+	display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    position: relative;
+	width: 60vw;
+	min-height: 60vh;
+    margin: 60px auto;
+	padding: 0 20px;
+}
+
+.navigation{
+    display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	gap: 10px;
+	align-items: center;
+	padding: 8px 0;
+    margin-bottom: 10px;
+}
+
+.navigation a{
+    font-size: 15px;
+	font-weight: 700;
+	letter-spacing: -.5px;
+}
+.navigation i{
+    font-size: 16px;
+	color: #9FA6B0;
+}
+
+.produk{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    width: 100%;
+    min-height: 485px;
+    gap: 20px;
+}
+
+.gambar{
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
-    padding: 0 20px;
-    margin: 15% auto;
-    margin-bottom: 5px;
-    width: 90%;
-    align-items: center;
+    width: 400px;
+    height: 485px;
+    gap: 5px;
 }
 
 .gambar1 img {
-	background-color: #FFFFFF;
-	height: 450px;
-	object-fit: cover;
-	width: 450px;
+    height: 400px;
+	width: 400px;
+	object-fit: fill;
+    color: transparent;
+    border-radius: 5px;
+	background-color: #FFF;
 }
 
-.list-gambar {
-	display: flex;
+div.gambar div.gambar1 div.list-gambar{
+    display: flex;
 	flex-direction: row;
-	height: auto;
+    justify-content: flex-start;
+	height: max-content;
 	margin-top: 10px;
-	overflow-x: scroll;
-	width: 450px;
+	overflow: auto;
+	width: 100%;
+    color: transparent;
+}
+
+.list-gambar::-webkit-scrollbar {
+    height: 5px;
+}
+.list-gambar::-webkit-scrollbar-track {
+    background: transparent;
+}
+.list-gambar::-webkit-scrollbar-thumb {
+    background: #a7a6a6;
+    border-radius: 50px;
+}
+.list-gambar::-webkit-scrollbar-thumb:hover {
+    background: #717171;
+}
+@media (max-width: 425px) {
+	.list-gambar::-webkit-scrollbar-track {
+		background: transparent;
+		width: 2px;
+	}
 }
 
 .list-gambar img {
 	border-radius: 5px;
 	cursor: pointer;
 	height: 80px;
-	margin-right: 10px;
 	transition: 0.2s;
-
 }
 
 .list-gambar img:hover {
 	filter: brightness(0.9);
-}
-
-div.gambar div.gambar1 div.list-gambar{
-  overflow-x: scroll;
 }
 
 .produk{
@@ -146,7 +204,6 @@ div.gambar div.gambar1 div.list-gambar{
     box-shadow: 0 0 0 3px #F8F8F8,
                 0 0 0 3.5px #E88D2F;
     border-radius: 10px;
-    margin: 50px auto;
     padding: 12px;
     font-family: 'Quicksand', sans-serif;
     color: #444;

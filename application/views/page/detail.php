@@ -12,35 +12,36 @@
 
         <div class="produk">
             <div class="gambar">
-              <div class="gambar1">
-                <a href="<?= base_url(); ?>assets/images/product/<?=$product['img']; ?>" data-lightbox="img-1">
-                    <img src="<?= base_url(); ?>assets/images/product/<?= $product['img']; ?>" alt="produk" class="jumbo-thumb">
-                </a>
-              <div class="list-gambar">
-                <img src="<?= base_url(); ?>assets/images/product/<?= $product['img']; ?>" alt="gambar" class="thumb">
-                  <?php foreach($img->result_array() as $d): ?>
-                    <img src="<?= base_url(); ?>assets/images/product/<?= $d['img']; ?>" alt="gambar" class="thumb">
-                  <?php endforeach; ?>
-              </div>
-              </div>
+                <div class="gambar1">
+                    <a href="<?= base_url(); ?>assets/images/product/<?=$product['img']; ?>" data-lightbox="img-1">
+                        <img src="<?= base_url(); ?>assets/images/product/<?= $product['img']; ?>" alt="produk" class="jumbo-thumb">
+                    </a>
+                <div class="list-gambar">
+                    <img src="<?= base_url(); ?>assets/images/product/<?= $product['img']; ?>" alt="gambar" class="thumb">
+                    <?php foreach($img->result_array() as $d): ?>
+                        <img src="<?= base_url(); ?>assets/images/product/<?= $d['img']; ?>" alt="gambar" class="thumb">
+                    <?php endforeach; ?>
+                </div>
+                </div>
             </div>
             <div class="harga">
             <div class="stok-status">
-                    <?php
-                    if ($product['stock'] > 0 ) {
-                    }else{
-                        echo 'Stok Barang Habis';
-                        ?><script>
-                            $(".harga > .stok-status").css("background", "#D9534F");
-                        </script><?php
-                    }
-                    ?>
+                <?php
+                if ($product['stock'] > 0 ) {
+                    echo 'Stok Barang Ready';
+                    ?><script>
+                        $(".harga > .stok-status").css("background", "#5BB75B");
+                    </script><?php
+                }else{
+                    echo 'Stok Barang Habis';
+                    ?><script>
+                        $(".harga > .stok-status").css("background", "#D9534F");
+                    </script><?php 
+                } ?>
                 </div>
                 <div class="judul"><?= $product['title']; ?></div>
                 <p class="subtitle">Terjual <?= $product['transaction']; ?> Produk &bull; <?= $product['viewer']; ?>x Dilihat</p>
-                <hr>
-
-                    <br>
+                    
                     <tr>
                         <td class="t">Stok Tersedia:</td>
                         <td><?= $product['stock']; ?> produk</td>
@@ -48,29 +49,17 @@
                 <div class="rp">
                     <table>
                         <?php if($product['stock'] > 0){ ?>
-                        <tr>
-                        <td>
-                            <div class="counter">
-                            <button  onclick="minusProduct(<?= $priceP; ?>)">-</button><!--
-                        --><input disabled type="text" value="1" id="qtyProduct" class="valueJml"><!--
-                        --><button  onclick="plusProduct(<?= $priceP; ?>, <?= $product['stock']; ?>)">+</button>
-                        </div>
-                        </td>
                     </tr>
                     <tr>
-                            <td class="price">Rp <?= str_replace(",",".",number_format($product['price'])); ?></td>
-                        </tr>
+                        <td class="price">Rp <?= str_replace(",",".",number_format($product['price'])); ?></td>
+                    </tr>
                     <?php } ?>
-
-
-
 
                 </table>
                 </div>
                 <div class="stok">
 
                 </div>
-                <hr>
                 <div class="quant">Quantity :
                     <div class="counter">
                         <span class="down" onClick='decreaseCount(event, this)'>-</span>
@@ -213,7 +202,7 @@
         if(e.target.className == 'thumb'){
             jumboImgProduct.src = e.target.src;
             jumboHrefImgProduct.href = e.target.src;
-
+            
             thumbsImgProduct.forEach(function(thumb){
                 thumb.className = 'thumb';
             })
