@@ -29,7 +29,7 @@
         <a href="<?= base_url(); ?>p/<?= $p['slug']; ?>">
           <div>
           <img src="<?= base_url(); ?>assets/images/product/<?= $p['img']; ?>" >
-            
+
             <div class="ket">
               <h2><?= $p['title']; ?></h2>
               <h3>Rp <?= str_replace(",",".",number_format($p['price'])); ?></h3>
@@ -55,7 +55,7 @@
         <a href="<?= base_url(); ?>p/<?= $p['slug']; ?>">
           <div>
           <img src="<?= base_url(); ?>assets/images/product/<?= $p['img']; ?>" >
-            
+
             <div class="ket">
               <h2><?= $p['title']; ?></h2>
               <h3>Rp <?= str_replace(",",".",number_format($p['price'])); ?></h3>
