@@ -56,7 +56,7 @@ body.darkmode a{
 .darkmode .list-kategori ul a:hover{
     background: #F806CC;
     color: white;
-    
+
 }
 @media only screen and (max-width: 878px){
 
@@ -75,6 +75,12 @@ body.darkmode a{
     }
 
 }
+
+
+.darkmode div.modal-body div.main-category div.item p {
+	color: #F806CC;
+}
+
 
 .darkmode .produk-box{
 	color: rgb(227, 227, 227);
@@ -95,7 +101,7 @@ body.darkmode a{
 
     background: rgb(57, 57, 57);
 	box-shadow: 0 0 5px #282828;
-   
+
 }
 .darkmode .footer-section h3{
 	color: white

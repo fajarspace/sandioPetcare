@@ -32,7 +32,7 @@ div.category-menu div.main-category div.item img {
 
 div.category-menu div.main-category div.item p {
 	color: #333333;
-	font-family: "Open Sans";
+	font-family: 'Quicksand', sans-serif;
 	font-size: 15px;
 	margin-top: 10px;
 	text-align: center;
@@ -69,7 +69,7 @@ div.modal-body div.main-category div.item img {
 
 div.modal-body div.main-category div.item p {
 	color: #333333;
-	font-family: "Open Sans";
+	font-family: 'Quicksand', sans-serif;
 	font-size: 15px;
 	margin-top: 10px;
 	text-align: center;
