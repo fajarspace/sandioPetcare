@@ -95,7 +95,7 @@
             <div class="alert alert-warning">Upss. Kamu belum memiliki satupun belanjaan. Yuk belanja dulu.</div>
         <?php } ?>
     </div>
-    <div class="total shadow">
+    <div class="payment-total shadow">
         <h2 class="title">Ringkasan Belanja</h2>
         <hr>
         <div class="list">
