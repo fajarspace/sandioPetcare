@@ -91,7 +91,7 @@ div.wrapper-cart div.navigation i {
 	font-size: 10px;
 	color: #222;
 	height: 37px;
-	overflow-x: hidden;
+	overflow: hidden;
 	width: 100%;
 }
 
@@ -317,7 +317,7 @@ div.wrapper-cart div.navigation i {
 		font-size: 10px;
 		color: #222;
 		height: 37px;
-		overflow-x: hidden;
+		overflow: hidden;
 		width: 100%;
 	}
 }
