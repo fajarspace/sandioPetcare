@@ -33,15 +33,18 @@ button {
 	border-radius: 5px;
 	cursor: pointer;
 	height: 80px;
+	margin-right: 10px;
 	transition: 0.2s;
-	width: 80px;
-  overflow-x: scroll;
+
 }
 
 .list-gambar img:hover {
 	filter: brightness(0.9);
 }
 
+div.gambar div.gambar1 div.list-gambar{
+  overflow-x: scroll;
+}
 
 .produk{
     display: flex;
