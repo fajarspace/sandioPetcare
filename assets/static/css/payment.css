@@ -84,6 +84,34 @@ div.wrapper-payment div.navigation i {
 	font-weight: 700;
 }
 
+.payment-total > .lanjut > button{
+	width: 100%;
+	padding: 10px;
+	text-align: center;
+	background-color: #E88D2F;
+	border-radius: 5px;
+	cursor: pointer;
+	font-size: 15px;
+	font-weight: 700;
+	color: #fff;
+	font-family: 'Quicksand', sans-serif;
+}
+.payment-total > .lanjut > button:hover{
+	box-shadow: -2px 2px 3px #d1d1d1;
+}
+
+.payment-total > .belanja > button{
+	width: 100%;
+	padding: 10px;
+	text-align: center;
+	background-color: #cecece;
+	border-radius: 5px;
+	cursor: pointer;
+	font-size: 15px;
+	font-weight: 700;
+	color: #fff;
+	font-family: 'Quicksand', sans-serif;
+}
 
 
 

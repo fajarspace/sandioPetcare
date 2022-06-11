@@ -124,10 +124,12 @@
             </div>
         <?php } ?>
         <?php if($this->cart->total_items() > 0){ ?>
-            <button class="btn rounded-pill btn-dark btn-block mt-2" id="btnPaymentNow" type="submit">Lanjutkan</button>
+          <a class="lanjut" href="#">
+            <button id="btnPaymentNow" type="submit">Lanjutkan</button>
+          </a>
         <?php }else{ ?>
             <div class="alert mt-2 alert-warning">Keranjangmu masih kosong.</div>
-            <a href="<?= base_url(); ?>">
+            <a class="belanja" href="<?= base_url(); ?>">
                 <button class="btn rounded-pill btn-dark btn-block mt-2">Belanja Dulu</button>
             </a>
         <?php } ?>
