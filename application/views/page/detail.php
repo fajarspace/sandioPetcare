@@ -7,56 +7,22 @@
         <i class="fa fa-caret-right"></i>
         <a><?= $product['title']; ?></a>
     </div>
+
     <?php $setting = $this->db->get('settings')->row_array(); ?>
 
         <section class="produk">
             <div class="gambar">
-
-
-                <div class="gambar-besar">
-                    <div class="produk1 aktif">
-
-                            <img src="<?= base_url(); ?>assets/images/product/<?= $product['img']; ?>" alt="produk">
-
-                    </div>
-                    <?php foreach($img->result_array() as $d): ?>
-                    <div class="produk2">
-                        <img src="<?= base_url(); ?>assets/images/product/<?= $product['img']; ?>" alt="gambar" class="thumb">
-
-                        <img src="<?= base_url(); ?>assets/images/product/<?= $d['img']; ?>" alt="gambar" class="thumb">
-
-                    </div>
-                    <?php endforeach; ?>
-                </div>
-                <div class="list-gambar">
-                    <div class="produk1 aktif">
-                        <?php if($product['img'] == ""){ ?>
-                            <img src="assets/img/produk/noimage.png">
-                        <?php }else{ ?>
-                            <img src="<?= base_url(); ?>assets/images/product/<?= $product['img']; ?>" alt="produk">
-                        <?php } ?>
-                    </div>
-                    <?php foreach($img->result_array() as $d): ?>
-                    <div class="produk2">
-
-                      <?php if($d['img'] == ""){ ?>
-                          <img src="assets/img/produk/noimage.png">
-                      <?php }else{ ?>
-                          <img src="<?= base_url(); ?>assets/images/product/<?= $d['img']; ?>" alt="produk">
-                      <?php } ?>
-
-                    </div>
-                    <?php endforeach; ?>
-                    <div class="produk3">
-                        <?php if($d['produk_foto3'] == ""){
-                            ?><script>
-                            $(".produk3").css("display", "none");
-                            </script><?php
-                            false; }else{ ?>
-                            <img src="assets/img/produk/<?= $d['produk_foto3'] ?>">
-                        <?php } ?>
-                    </div>
-                </div>
+              <div class="gambar1">
+                <a href="<?= base_url(); ?>assets/images/product/<?=$product['img']; ?>" data-lightbox="img-1">
+                    <img src="<?= base_url(); ?>assets/images/product/<?= $product['img']; ?>" alt="produk" class="jumbo-thumb">
+                </a>
+              <div class="list-gambar">
+                <img src="<?= base_url(); ?>assets/images/product/<?= $product['img']; ?>" alt="gambar" class="thumb">
+                  <?php foreach($img->result_array() as $d): ?>
+                    <img src="<?= base_url(); ?>assets/images/product/<?= $d['img']; ?>" alt="gambar" class="thumb">
+                  <?php endforeach; ?>
+              </div>
+            </div>
 
             </div>
             <div class="harga">
@@ -241,11 +207,11 @@
         })
     }
 
-    // slider product
-    const containerImgProduct = document.querySelector("div.wrapper div.top div.main-top div.img");
-    const jumboImgProduct = document.querySelector("div.wrapper div.top div.main-top div.img img.jumbo-thumb");
-    const jumboHrefImgProduct = document.querySelector("div.wrapper div.top div.main-top div.img a");
-    const thumbsImgProduct = document.querySelectorAll("div.wrapper div.top div.main-top div.img div.img-slider img.thumb");
+    // list gambar
+    const containerImgProduct = document.querySelector("div.gambar1");
+    const jumboImgProduct = document.querySelector("div.gambar1 img.jumbo-thumb");
+    const jumboHrefImgProduct = document.querySelector("div.gambar1 a");
+    const thumbsImgProduct = document.querySelectorAll("div.gambar1 div.list-gambar img.thumb");
 
     containerImgProduct.addEventListener('click', function(e){
         if(e.target.className == 'thumb'){

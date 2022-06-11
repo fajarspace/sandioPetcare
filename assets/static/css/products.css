@@ -13,6 +13,36 @@ button {
     align-items: center;
 }
 
+.gambar1 img {
+	background-color: #FFFFFF;
+	height: 450px;
+	object-fit: cover;
+	width: 450px;
+}
+
+.list-gambar {
+	display: flex;
+	flex-direction: row;
+	height: auto;
+	margin-top: 10px;
+	overflow-x: scroll;
+	width: 450px;
+}
+
+.list-gambar img {
+	border-radius: 5px;
+	cursor: pointer;
+	height: 80px;
+	margin-right: 10px;
+	transition: 0.2s;
+	width: 80px;
+}
+
+.list-gambar img:hover {
+	filter: brightness(0.9);
+}
+
+
 .produk{
     display: flex;
     flex-direction: row;
