@@ -35,7 +35,6 @@
             </div>
         </div>
         <?php $setting = $this->db->get('settings')->row_array(); ?>
-
         <div class="produk-list">
             <?php if($products->num_rows() > 0){ ?>
                 <?php foreach($products->result_array() as $p): ?>
@@ -53,12 +52,15 @@
             </div>
             <?php endforeach; ?>
         </div>
+      </div>
+    </div>
 
-        </div>
+
+
 
             <div class="clearfix"></div>
             <?php }else{ ?>
                 <div class="alert alert-warning">Upss. Tidak ada produk yang dapat ditampilkan</div>
             <?php } ?>
-    </div>
+
 </main>

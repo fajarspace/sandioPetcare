@@ -2,11 +2,11 @@ div.wrapper {
 	height: auto;
 	margin: 0% auto;
 	margin-bottom: 70px;
-	margin-top: 30px;
+	width: 100%
 }
 
 div.wrapper div.title-head {
-	background: linear-gradient(to right, #008cd7, #5ec7ff);
+	background: linear-gradient(to right, #E88D2F, #A91079);
 	border-radius: 5px;
 	box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.1);
 	padding: 15px 30px;
@@ -23,8 +23,8 @@ div.wrapper div.core {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
-	margin: auto;
-	margin-top: 20px;
+	padding: 20px;
+
 }
 
 div.wrapper div.core div.filter {
@@ -146,7 +146,7 @@ div.wrapper div.testi {
 	width: 100%;
 }
 
-@media screen and (max-width: 1150px) {
-	div.wrapper {
-		display: block;
+@media screen and (max-width: 738px) {
+	.filter {
+		display: none;
 	}
