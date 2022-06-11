@@ -6,6 +6,7 @@
     flex-wrap: nowrap;
     position: relative;
 	width: 60vw;
+	min-height: 60vh;
     gap: 5px;
     margin: 50px auto;
 	padding: 10px 0;
@@ -254,4 +255,37 @@ div.wrapper-cart div.navigation i {
 	font-weight: 700;
 	color: #fff;
 	font-family: 'Quicksand', sans-serif;
+}
+
+.modal{
+	display: none;
+}
+
+
+@media screen and (max-width: 1600px) {
+	.container-cart{
+		width: 70vw;
+	}
+}
+@media screen and (max-width: 1400px) {
+	.container-cart{
+		width: 80vw;
+	}
+}
+@media screen and (max-width: 1200px) {
+	.container-cart{
+		width: 90vw;
+		gap: 5px;
+	}
+}
+@media screen and (max-width: 1000px) {
+	.container-cart{
+		width: 95vw;
+		gap: 5px;
+	}
+}
+@media screen and (max-width: 900px) {
+	.total-cart {
+		width: 400px;
+	}
 }
