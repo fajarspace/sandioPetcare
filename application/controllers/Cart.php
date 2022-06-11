@@ -17,7 +17,7 @@ class Cart extends CI_Controller {
         $this->load->view('templates/header', $data);
         $this->load->view('templates/navbar');
         $this->load->view('page/cart');
-        $this->load->view('templates/footerv2');
+        $this->load->view('templates/footer');
     }
 
     public function add_to_cart(){
