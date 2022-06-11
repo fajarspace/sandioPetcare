@@ -25,6 +25,7 @@
     <link rel="stylesheet" type="text/css" href="<?= base_url();  ?>assets/static/css/payment.css">
     <link rel="stylesheet" type="text/css" href="<?= base_url();  ?>assets/static/css/cart.css">
     <link rel="stylesheet" type="text/css" href="<?= base_url();  ?>assets/static/css/products.css">
+    <link rel="stylesheet" type="text/css" href="<?= base_url();  ?>assets/static/css/search.css">
 
     <link
       rel="shortcut icon"
