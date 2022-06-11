@@ -1,5 +1,5 @@
 <main class="container-produk">
-<div class="wrapper">
+
     <div class="navigation">
         <a href="<?= base_url(); ?>">Home</a>
         <i class="fa fa-caret-right"></i>
@@ -10,7 +10,7 @@
 
     <?php $setting = $this->db->get('settings')->row_array(); ?>
 
-        <section class="produk">
+        <div class="produk">
             <div class="gambar">
               <div class="gambar1">
                 <a href="<?= base_url(); ?>assets/images/product/<?=$product['img']; ?>" data-lightbox="img-1">
@@ -28,10 +28,6 @@
             <div class="stok-status">
                     <?php
                     if ($product['stock'] > 0 ) {
-                        echo 'Stok Barang Ready';
-                        ?><script>
-                            $(".harga > .stok-status").css("background", "#5BB75B");
-                        </script><?php
                     }else{
                         echo 'Stok Barang Habis';
                         ?><script>
@@ -92,7 +88,10 @@
                         <?php } ?>
                 </div>
             </div>
-        </section>
+
+
+        </div>
+
         <section class="detail">
             <div class="judul">Detail Produk</div>
             <div class="ket">
@@ -108,10 +107,8 @@
 
                 <?= nl2br($product['description']); ?>
             </div>
-        </section>
+          </section>
 
-
-</div>
  </main>
 <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 <script>
