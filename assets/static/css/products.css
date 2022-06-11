@@ -33,9 +33,9 @@ button {
 	border-radius: 5px;
 	cursor: pointer;
 	height: 80px;
-	margin-right: 10px;
 	transition: 0.2s;
 	width: 80px;
+  overflow-x: scroll;
 }
 
 .list-gambar img:hover {
@@ -142,6 +142,7 @@ button {
     box-shadow: 0 0 0 3px #F8F8F8,
                 0 0 0 3.5px #E88D2F;
     border-radius: 10px;
+    margin: 50px auto;
     padding: 12px;
     font-family: 'Quicksand', sans-serif;
     color: #444;

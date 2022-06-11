@@ -22,8 +22,7 @@
                     <img src="<?= base_url(); ?>assets/images/product/<?= $d['img']; ?>" alt="gambar" class="thumb">
                   <?php endforeach; ?>
               </div>
-            </div>
-
+              </div>
             </div>
             <div class="harga">
             <div class="stok-status">
