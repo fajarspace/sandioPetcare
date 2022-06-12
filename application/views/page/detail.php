@@ -73,6 +73,7 @@
                         <input disabled type="text" value="1" id="qtyProduct" class="valueJml">
                         <span class="up" onclick="plusProduct(<?= $priceP; ?>, <?= $product['stock']; ?>)">+<button class="up" ></button></span>
                     </div>
+                    <div class="stok"><i class="fa-solid fa-box"></i> <?= $product['stock']; ?> Tersedia</div>
                     <?php } ?>
                 </div>
 
