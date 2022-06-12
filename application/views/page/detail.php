@@ -60,15 +60,6 @@
                 <div class="stok">
                   <?php if($product['stock'] > 0){ ?>
                     <tr>
-                        <?php if($setting['promo'] == 1){ ?>
-                        <?php if($product['promo_price'] == 0){ ?>
-                            <?php $priceP = $product['price']; ?>
-                        <?php }else{ ?>
-                            <?php $priceP = $product['promo_price']; ?>
-                        <?php } ?>
-                        <?php }else{ ?>
-                            <?php $priceP = $product['price']; ?>
-                        <?php } ?>
                         <div class="quant">Quantity :
                         <td>
                           <div class="counter">
