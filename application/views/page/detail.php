@@ -10,21 +10,29 @@
 
     <?php $setting = $this->db->get('settings')->row_array(); ?>
 
-        <div class="produk">
-            <div class="gambar">
-              <div class="gambar1">
-              <a href="<?= base_url(); ?>assets/images/product/<?= $product['img']; ?>" data-lightbox="img-1">
-                  <img src="<?= base_url(); ?>assets/images/product/<?= $product['img']; ?>" alt="produk" class="jumbo-thumb">
-              </a>
-              <div class="list-gambar">
-                  <img src="<?= base_url(); ?>assets/images/product/<?= $product['img']; ?>" alt="gambar" class="thumb">
-                  <?php foreach($img->result_array() as $d): ?>
-                      <img src="<?= base_url(); ?>assets/images/product/<?= $d['img']; ?>" alt="gambar" class="thumb">
-                  <?php endforeach; ?>
-              </div>
+    <div class="produk">
+        <div class="gambar">
+            <div class="gambar1">
+                <a href="<?= base_url(); ?>assets/images/product/<?=$product['img']; ?>" data-lightbox="img-1">
+                    <img src="<?= base_url(); ?>assets/images/product/<?= $product['img']; ?>" alt="produk" class="jumbo-thumb">
+                </a>
+            <div class="list-gambar">
+                <img src="<?= base_url(); ?>assets/images/product/<?= $product['img']; ?>" alt="gambar" class="thumb">
+                <?php foreach($img->result_array() as $d): ?>
+                    <img src="<?= base_url(); ?>assets/images/product/<?= $d['img']; ?>" alt="gambar" class="thumb">
+                <?php endforeach; ?>
             </div>
+                <?php if($d['img'] > 5) {?> 
+                    <script> 
+                        $('.list-gambar').css('justify-content','flex-start');
+                        $('.list-gambar').css('padding-left','5px');
+                        $('.list-gambar').css('padding-right','5px');
+                    </script> 
+                    <?php
+                } ?>
             </div>
-            <div class="harga">
+        </div>
+        <div class="harga">
             <div class="stok-status">
                 <?php
                 if ($product['stock'] > 0 ) {
@@ -36,68 +44,48 @@
                     echo 'Stok Barang Habis';
                     ?><script>
                         $(".harga > .stok-status").css("background", "#D9534F");
-                    </script><?php
+                    </script><?php 
                 } ?>
                 </div>
                 <div class="judul"><?= $product['title']; ?></div>
-                <p class="subtitle">Terjual <?= $product['transaction']; ?> Produk &bull; <?= $product['viewer']; ?>x Dilihat</p>
 
-                    <tr>
-                        <td class="t">Stok Tersedia:</td>
-                        <td><?= $product['stock']; ?> produk</td>
-                    </tr>
-                <div class="rp">
-                    <table>
-                        <?php if($product['stock'] > 0){ ?>
-                    </tr>
-                    <tr>
-                        <td class="price">Rp <?= str_replace(",",".",number_format($product['price'])); ?></td>
-                    </tr>
-                    <?php } ?>
-
-                </table>
+                <div class="info">
+                    <div class="subtitle"><i class="fa-solid fa-check"></i> <?= $product['transaction']; ?> Berhasil Terjual </div>
+                    <div><?= $product['viewer']; ?> <i class="fa-regular fa-eye"></i></div>
                 </div>
-                <div class="stok">
-                  <?php if($product['stock'] > 0){ ?>
-                    <tr>
-                        <?php if($setting['promo'] == 1){ ?>
-                        <?php if($product['promo_price'] == 0){ ?>
-                            <?php $priceP = $product['price']; ?>
-                        <?php }else{ ?>
-                            <?php $priceP = $product['promo_price']; ?>
-                        <?php } ?>
-                        <?php }else{ ?>
-                            <?php $priceP = $product['price']; ?>
-                        <?php } ?>
-                        <div class="quant">Quantity :
-                        <td>
-                          <div class="counter">
-                            <span class="down" onclick="minusProduct(<?= $priceP; ?>)">-<button class="down" ></button>
-                            </span>
-
+                
+                <div class="rp">Rp <?= str_replace(",",".",number_format($product['price'])); ?></div>
+                
+                <label for="quant">Kuantitas :</label>
+                <div class="quant">
+                    <?php if($product['stock'] > 0){ ?>
+                    <?php if($setting['promo'] == 1){ ?>
+                    <?php if($product['promo_price'] == 0){ ?>
+                        <?php $priceP = $product['price']; ?>
+                    <?php }else{ ?>
+                        <?php $priceP = $product['promo_price']; ?>
+                    <?php } ?>
+                    <?php }else{ ?>
+                        <?php $priceP = $product['price']; ?>
+                    <?php } ?>
+                    <div class="counter">
+                        <span class="down" onclick="minusProduct(<?= $priceP; ?>)">-<button class="down" ></button></span>
                         <input disabled type="text" value="1" id="qtyProduct" class="valueJml">
-
                         <span class="up" onclick="plusProduct(<?= $priceP; ?>, <?= $product['stock']; ?>)">+<button class="up" ></button></span>
-
-                        </div>
-                        </td>
-                      </div>
-                    </tr>
-
+                    </div>
                     <?php } ?>
                 </div>
 
                 <div class="kirim">
                     <?php if($product['stock'] > 0){ ?>
-                    <button class="beli" onclick="buy()"><i class="fa-brands fa-whatsapp"></i> Beli Sekarang</button>
-                    <button class="keranjang" onclick="addCart()"><i class="fa-solid fa-cart-plus"></i> Keranjang</button>
+                        <button class="beli" onclick="buy()"><i class="fa-brands fa-whatsapp"></i> Beli Sekarang</button>
+                        <button class="keranjang" onclick="addCart()"><i class="fa-solid fa-cart-plus"></i> Keranjang</button>
                     <?php }else{ ?>
-                        <p class="btn rounded-pill btn-outline-secondary">Stok lagi kosong</p>
-                        <?php } ?>
+                        <div class="beli-kosong"><i class="fa-brands fa-whatsapp"></i> Beli Sekarang</div>
+                        <div class="keranjang-kosong"><i class="fa-solid fa-cart-plus"></i> Keranjang</div>
+                    <?php } ?>
                 </div>
             </div>
-
-
         </div>
 
         <section class="detail">
@@ -115,9 +103,9 @@
 
                 <?= nl2br($product['description']); ?>
             </div>
-          </section>
+        </section>
 
- </main>
+</main>
 <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 <script>
     function plusProduct(price, stock){

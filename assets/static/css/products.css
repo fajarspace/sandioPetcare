@@ -7,15 +7,13 @@ button {
     font-family: 'Quicksand', sans-serif;
 	color: #444;
 	display: flex;
-  justify-content: space-between;
     flex-direction: column;
     flex-wrap: nowrap;
     position: relative;
-	width: 90%;
+    width: 1070px;
 	min-height: 60vh;
     margin: 60px auto;
 	padding: 0 20px;
-
 }
 
 .navigation{
@@ -25,7 +23,7 @@ button {
 	gap: 10px;
 	align-items: center;
 	padding: 8px 0;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
 }
 
 .navigation a{
@@ -53,8 +51,8 @@ button {
     flex-direction: column;
     flex-wrap: nowrap;
     width: 400px;
-    height: 485px;
-    gap: 5px;
+    height: 500px;
+    gap: 10px;
 }
 
 .gambar1 img {
@@ -66,15 +64,19 @@ button {
 	background-color: #FFF;
 }
 
-div.gambar div.gambar1 div.list-gambar{
+.list-gambar{
     display: flex;
 	flex-direction: row;
-    justify-content: flex-start;
+    justify-content: center;
 	height: max-content;
 	margin-top: 10px;
 	overflow: auto;
 	width: 100%;
     color: transparent;
+    position: relative;
+    flex-wrap: nowrap;
+    padding: 5px 0;
+    gap: 15px;
 }
 
 .list-gambar::-webkit-scrollbar {
@@ -101,11 +103,13 @@ div.gambar div.gambar1 div.list-gambar{
 	border-radius: 5px;
 	cursor: pointer;
 	height: 80px;
-	transition: 0.2s;
+    width: 60px;
+    height: 60px;
 }
 
 .list-gambar img:hover {
-	filter: brightness(0.9);
+	filter: brightness(0.8);
+    outline: 2px solid #E88D2F;
 }
 
 .produk{
@@ -126,77 +130,6 @@ div.gambar div.gambar1 div.list-gambar{
     gap: 5px;
 }
 
-.gambar-besar {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    width: 400px;
-    height: 400px;
-    border-radius: 20px;
-}
-
-.gambar-besar > .produk1 > img,
-.gambar-besar > .produk2 > img,
-.gambar-besar > .produk3 > img{
-    display: block;
-    width: 400px;
-    height: 400px;
-    object-fit: fill;
-    color: transparent;
-    display: none;
-    border-radius: 10px;
-}
-.gambar-besar > .produk1.aktif > img,
-.gambar-besar > .produk2.aktif > img,
-.gambar-besar > .produk3.aktif > img{
-    display: inline;
-    box-shadow: 0 0 0 3px #F8F8F8,
-                0 0 0 3.5px #E88D2F;
-}
-
-.list-gambar{
-    display: flex;
-    position: relative;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    overflow: hidden;
-    width: 100%;
-    height: max-content;
-    gap: 20px;
-    justify-content: center;
-    color: transparent;
-}
-
-.list-gambar > .produk1,
-.list-gambar > .produk2,
-.list-gambar > .produk3{
-    padding: 12px 0;
-}
-
-.list-gambar > .produk1 > img,
-.list-gambar > .produk2 > img,
-.list-gambar > .produk3 > img{
-    width: 60px;
-    height: 60px;
-    cursor: pointer;
-    border-radius: 5px;
-    box-shadow: 0 0 0 3px #F8F8F8,
-                0 0 0 4px #cecece;
-    transition: .2s;
-}
-.list-gambar > .produk1 > img:hover,
-.list-gambar > .produk2 > img:hover,
-.list-gambar > .produk3 > img:hover{
-    box-shadow: 0 0 0 3px #F8F8F8,
-                0 0 0 4px #E88D2F;
-}
-
-.list-gambar > .produk1.aktif > img,
-.list-gambar > .produk2.aktif > img,
-.list-gambar > .produk3.aktif > img{
-    box-shadow: 0 0 0 3px #F8F8F8,
-                0 0 0 5px #E88D2F;
-}
 
 .harga {
     display: flex;
@@ -204,14 +137,14 @@ div.gambar div.gambar1 div.list-gambar{
     flex-wrap: nowrap;
     justify-content: flex-start;
     background: #fff;
-    box-shadow: 0 0 0 3px #F8F8F8,
-                0 0 0 3.5px #E88D2F;
     border-radius: 10px;
-    padding: 12px;
+    box-shadow: 0 0 0 0.5px #E88D2F;
+    padding: 10px;
     font-family: 'Quicksand', sans-serif;
     color: #444;
     gap: 15px;
     height: max-content;
+    width: 100%;
 }
 
 .harga > .stok-status{
@@ -227,9 +160,23 @@ div.gambar div.gambar1 div.list-gambar{
     font-size: 22px;
     font-weight: 700;
     padding: 0 5px;
-    padding-bottom: 10px;
-    border-bottom: 1px solid #cecece;
 }
+
+.harga > .info {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    padding: 5px 10px;
+    padding-left: 5px;
+    font-size: 14px;
+    font-weight: 700;
+    color: #E88D2F;
+}
+
+
 
 .harga > .rp{
     font-size: 28px;
@@ -239,10 +186,20 @@ div.gambar div.gambar1 div.list-gambar{
     padding-bottom: 10px;
 }
 
-.harga > .stok{
-    padding: 0 5px;
-    padding-bottom: 10px;
+.harga > .quant{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+
 }
+
+.harga > .quant > .stok{
+    padding: 6px;
+    font-size: 14px;
+    font-weight: 700;
+    color: #E88D2F;
+}
+
 .harga > .quant{
     padding: 0 5px;
     padding-bottom: 10px;
@@ -299,7 +256,6 @@ div.gambar div.gambar1 div.list-gambar{
 }
 
 .harga > .kirim{
-    margin-top: 40px;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -308,22 +264,34 @@ div.gambar div.gambar1 div.list-gambar{
     height: max-content;
 }
 
+.harga > .kirim > .beli-kosong,
 .harga > .kirim > .beli{
     width: 50%;
     font-size: 16px;
-    font-weight: 500;
+    font-weight: 700;
+    font-family: 'Quicksand', sans-serif;
     background: #E88D2F;
     color: #fff;
     text-align: center;
-    padding: 10px;
+    padding: 15px;
     border-radius: 8px;
     cursor: pointer;
 }
+
+.harga > .kirim > .keranjang-kosong:hover,
+.harga > .kirim > .keranjang:hover,
+.harga > .kirim > .beli-kosong:hover,
+.harga > .kirim > .beli:hover{
+    box-shadow: -1px 1px 3px #cacacb;
+}
+
+.harga > .kirim > .keranjang-kosong,
 .harga > .kirim > .keranjang{
     width: 50%;
     font-size: 16px;
     font-weight: 700;
     background: #fff;
+    font-family: 'Quicksand', sans-serif;
     color: #E88D2F;
     text-align: center;
     padding: 15px;
@@ -331,6 +299,10 @@ div.gambar div.gambar1 div.list-gambar{
     border: 1px solid #E88D2F;
     cursor: pointer;
 }
+
+.harga > .kirim > .beli-kosong{ background: #ccc; }
+.harga > .kirim > .keranjang-kosong{ border: 1px solid #ccc; color: #ccc; }
+
 
 .detail{
     width: 100%;
