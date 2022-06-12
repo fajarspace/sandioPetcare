@@ -467,6 +467,9 @@ button {
         cursor: pointer;
     }
 
+    .harga > .kirim > .beli-kosong{ background: #ccc; }
+    .harga > .kirim > .keranjang-kosong{ border: 1px solid #ccc; color: #ccc; }
+
     .harga > .quant {
         padding: 0;
         margin-top: -10px;
