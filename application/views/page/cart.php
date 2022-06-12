@@ -63,26 +63,6 @@
 </main>
 
 <!-- Modal -->
-<div class="modal fade" id="modalEditDescription" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-content">
-        <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalCenterTitle">Tambah Deskripsi</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-            </button>
-        </div>
-        <div class="modal-body" id="bodyModalEditKet">
-            
-        </div>
-        <div class="modal-footer">
-            <button type="button" class="btn rounded-pill btn-primary" id="btnEditKetProduct" data-dismiss="modal">Simpan</button>
-        </div>
-        </div>
-    </div>
-</div>
-
-<!-- Modal -->
 <div class="modal fade" id="modalAddDescription" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
@@ -93,7 +73,7 @@
             </button>
         </div>
         <div class="modal-body" id="bodyModalAddKet">
-            
+
         </div>
         <div class="modal-footer">
             <button type="button" class="btn rounded-pill btn-primary" id="btnSaveKetProduct" data-dismiss="modal">Simpan</button>
@@ -124,7 +104,7 @@
                 $("#bodyModalEditKet").html(`<div class="form-group">
                     <textarea name="ket_product" id="ket_product_edit" class="form-control form-control-sm" placeholder="Model, ukuran, warna, dll.">${res.ket}</textarea>
                     <input type="hidden" id="rowid_pro_edit" value=${id}>
-                </div>`);      
+                </div>`);
             }
         })
     }
