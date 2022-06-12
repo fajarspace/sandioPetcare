@@ -76,7 +76,7 @@
                             </span>
 
                         <input disabled type="text" value="1" id="qtyProduct" class="valueJml">
-                        
+
                         <span class="up" onclick="plusProduct(<?= $priceP; ?>, <?= $product['stock']; ?>)">+<button class="up" ></button></span>
 
                         </div>
@@ -85,13 +85,6 @@
                     </tr>
 
                     <?php } ?>
-                </div>
-                <div class="quant">Quantity :
-                    <div class="counter">
-                        <span class="down" onClick='decreaseCount(event, this)'>-</span>
-                        <input type="number" value="1" >
-                        <span class="up" onClick='increaseCount(event, this)'>+</span>
-                    </div>
                 </div>
 
                 <div class="kirim">
