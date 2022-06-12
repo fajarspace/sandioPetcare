@@ -257,7 +257,7 @@ button {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    gap: 15px;
+    gap: 10px;
     width: 100%;
     height: max-content;
 }
@@ -342,7 +342,7 @@ button {
 @media (max-width: 900px) {
 	.harga > .kirim{
         flex-direction: column;
-        gap: 15px;
+        gap: 10px;
     }
 }
 @media (max-width: 820px) {
