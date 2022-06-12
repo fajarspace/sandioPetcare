@@ -82,7 +82,7 @@ class Products extends CI_Controller {
 			$this->load->view('templates/header', $data);
 			$this->load->view('templates/navbar');
 			$this->load->view('page/detail', $data);
-			$this->load->view('templates/footer');
+			$this->load->view('templates/footerv2');
 		}
 	}
 

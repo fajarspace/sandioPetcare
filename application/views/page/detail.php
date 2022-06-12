@@ -12,17 +12,17 @@
 
         <div class="produk">
             <div class="gambar">
-                <div class="gambar1">
-                    <a href="<?= base_url(); ?>assets/images/product/<?=$product['img']; ?>" data-lightbox="img-1">
-                        <img src="<?= base_url(); ?>assets/images/product/<?= $product['img']; ?>" alt="produk" class="jumbo-thumb">
-                    </a>
-                <div class="list-gambar">
-                    <img src="<?= base_url(); ?>assets/images/product/<?= $product['img']; ?>" alt="gambar" class="thumb">
-                    <?php foreach($img->result_array() as $d): ?>
-                        <img src="<?= base_url(); ?>assets/images/product/<?= $d['img']; ?>" alt="gambar" class="thumb">
-                    <?php endforeach; ?>
-                </div>
-                </div>
+              <div class="gambar1">
+              <a href="<?= base_url(); ?>assets/images/product/<?= $product['img']; ?>" data-lightbox="img-1">
+                  <img src="<?= base_url(); ?>assets/images/product/<?= $product['img']; ?>" alt="produk" class="jumbo-thumb">
+              </a>
+              <div class="list-gambar">
+                  <img src="<?= base_url(); ?>assets/images/product/<?= $product['img']; ?>" alt="gambar" class="thumb">
+                  <?php foreach($img->result_array() as $d): ?>
+                      <img src="<?= base_url(); ?>assets/images/product/<?= $d['img']; ?>" alt="gambar" class="thumb">
+                  <?php endforeach; ?>
+              </div>
+            </div>
             </div>
             <div class="harga">
             <div class="stok-status">
@@ -36,12 +36,12 @@
                     echo 'Stok Barang Habis';
                     ?><script>
                         $(".harga > .stok-status").css("background", "#D9534F");
-                    </script><?php 
+                    </script><?php
                 } ?>
                 </div>
                 <div class="judul"><?= $product['title']; ?></div>
                 <p class="subtitle">Terjual <?= $product['transaction']; ?> Produk &bull; <?= $product['viewer']; ?>x Dilihat</p>
-                    
+
                     <tr>
                         <td class="t">Stok Tersedia:</td>
                         <td><?= $product['stock']; ?> produk</td>
@@ -58,14 +58,29 @@
                 </table>
                 </div>
                 <div class="stok">
+                  <?php if($product['stock'] > 0){ ?>
+                    <tr>
+                        <?php if($setting['promo'] == 1){ ?>
+                        <?php if($product['promo_price'] == 0){ ?>
+                            <?php $priceP = $product['price']; ?>
+                        <?php }else{ ?>
+                            <?php $priceP = $product['promo_price']; ?>
+                        <?php } ?>
+                        <?php }else{ ?>
+                            <?php $priceP = $product['price']; ?>
+                        <?php } ?>
+                        <div class="quant">Quantity :
+                        <td>
+                          <div class="counter">
+                            <button class="down" onclick="minusProduct(<?= $priceP; ?>)">-</button><!--
+                        --><input disabled type="text" value="1" id="qtyProduct" class="valueJml"><!--
+                        --><button class="up" onclick="plusProduct(<?= $priceP; ?>, <?= $product['stock']; ?>)">+</button>
+                        </div>
+                        </td>
+                      </div>
+                    </tr>
 
-                </div>
-                <div class="quant">Quantity :
-                    <div class="counter">
-                        <span class="down" onClick='decreaseCount(event, this)'>-</span>
-                        <input type="number" value="1" >
-                        <span class="up" onClick='increaseCount(event, this)'>+</span>
-                    </div>
+                    <?php } ?>
                 </div>
 
                 <div class="kirim">
@@ -202,7 +217,7 @@
         if(e.target.className == 'thumb'){
             jumboImgProduct.src = e.target.src;
             jumboHrefImgProduct.href = e.target.src;
-            
+
             thumbsImgProduct.forEach(function(thumb){
                 thumb.className = 'thumb';
             })
