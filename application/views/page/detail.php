@@ -58,7 +58,6 @@
                 
                 <label for="quant">Kuantitas :</label>
                 <div class="quant">
-                    <?php if($product['stock'] > 0){ ?>
                     <?php if($setting['promo'] == 1){ ?>
                     <?php if($product['promo_price'] == 0){ ?>
                         <?php $priceP = $product['price']; ?>
@@ -74,7 +73,6 @@
                         <span class="up" onclick="plusProduct(<?= $priceP; ?>, <?= $product['stock']; ?>)">+<button class="up" ></button></span>
                     </div>
                     <div class="stok"><i class="fa-solid fa-box"></i> <?= $product['stock']; ?> Tersedia</div>
-                    <?php } ?>
                 </div>
 
                 <div class="kirim">

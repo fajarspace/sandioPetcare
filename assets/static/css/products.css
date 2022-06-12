@@ -137,8 +137,8 @@ button {
     flex-wrap: nowrap;
     justify-content: flex-start;
     background: #fff;
-    border-radius: 10px;
-    box-shadow: 0 0 0 0.5px #E88D2F;
+    border-radius: 5px;
+    box-shadow: -1px 1px 3px #cacacb;
     padding: 10px;
     font-family: 'Quicksand', sans-serif;
     color: #444;
@@ -153,7 +153,7 @@ button {
     color: #fff;
     font-weight: 500;
     padding: 10px 0;
-    border-radius: 10px 10px 0 0;
+    border-radius: 5px 5px 0 0;
 }
 
 .harga > .judul {
@@ -179,10 +179,10 @@ button {
 
 
 .harga > .rp{
-    font-size: 28px;
+    font-size: 30px;
     font-weight: 700;
     color: #FF1E00;
-    padding: 0 5px;
+    padding: 0 10px;
     padding-bottom: 10px;
 }
 
@@ -274,7 +274,7 @@ button {
     color: #fff;
     text-align: center;
     padding: 15px;
-    border-radius: 8px;
+    border-radius: 5px;
     cursor: pointer;
 }
 
@@ -295,7 +295,7 @@ button {
     color: #E88D2F;
     text-align: center;
     padding: 15px;
-    border-radius: 8px;
+    border-radius: 5px;
     border: 1px solid #E88D2F;
     cursor: pointer;
 }
@@ -309,34 +309,29 @@ button {
     height: max-content;
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 10px;
     background: #fff;
-    box-shadow: 0 0 0 3px #F8F8F8,
-                0 0 0 3.5px #E88D2F;
-    border-radius: 10px;
-    padding: 10px;
+    box-shadow: -1px 1px 3px #cacacb;
+    border-radius: 5px;
+    padding: 20px;
+    position: relative;
+    margin: 30px auto;
 }
 
 .detail > .judul{
     font-family: 'Quicksand', sans-serif;
     color: #444;
     border-bottom: 1px solid #cecece;
-    padding: 15px 10px;
     font-size: 20px;
     font-weight: 700;
+    padding-bottom: 10px;
 }
 
-.detail > .ket > textarea{
-    width: 100%;
-    height: 500px;
-    resize: none;
-    outline-style: none;
-    border-style: none;
+.detail > .ket{
     font-family: 'Quicksand', sans-serif;
     color: #444;
-    padding: 0 10px;
-    line-height: 25px;
-    letter-spacing: 0.8px;
-    font-weight: 500;
     font-size: 15px;
+    font-weight: 600;
+    line-height: 1.8;
+    padding: 0 5px;
 }
