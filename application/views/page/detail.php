@@ -60,18 +60,38 @@
                 <div class="stok">
                   <?php if($product['stock'] > 0){ ?>
                     <tr>
+                        <?php if($setting['promo'] == 1){ ?>
+                        <?php if($product['promo_price'] == 0){ ?>
+                            <?php $priceP = $product['price']; ?>
+                        <?php }else{ ?>
+                            <?php $priceP = $product['promo_price']; ?>
+                        <?php } ?>
+                        <?php }else{ ?>
+                            <?php $priceP = $product['price']; ?>
+                        <?php } ?>
                         <div class="quant">Quantity :
                         <td>
                           <div class="counter">
-                            <button class="down" onclick="minusProduct(<?= $priceP; ?>)">-</button><!--
-                        --><input disabled type="text" value="1" id="qtyProduct" class="valueJml"><!--
-                        --><button class="up" onclick="plusProduct(<?= $priceP; ?>, <?= $product['stock']; ?>)">+</button>
+                            <span class="down" onclick="minusProduct(<?= $priceP; ?>)">-<button class="down" ></button>
+                            </span>
+
+                        <input disabled type="text" value="1" id="qtyProduct" class="valueJml">
+                        
+                        <span class="up" onclick="plusProduct(<?= $priceP; ?>, <?= $product['stock']; ?>)">+<button class="up" ></button></span>
+
                         </div>
                         </td>
                       </div>
                     </tr>
 
                     <?php } ?>
+                </div>
+                <div class="quant">Quantity :
+                    <div class="counter">
+                        <span class="down" onClick='decreaseCount(event, this)'>-</span>
+                        <input type="number" value="1" >
+                        <span class="up" onClick='increaseCount(event, this)'>+</span>
+                    </div>
                 </div>
 
                 <div class="kirim">
