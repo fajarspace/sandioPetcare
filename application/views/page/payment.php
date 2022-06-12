@@ -84,7 +84,7 @@
                 <h2 class="title">Metode Pengiriman</h2>
                 <small class="text-danger" id="paymentTextNotSupportDelivery" style="display: none;">Metode antar belum tersedia untuk tempat Anda.</small>
                 <div class="form-group mt-3" id="groupPaymentSelectKurir">
-                    <select name="paymentSelectKurir" id="paymentSelectKurir" class="form-control" required>
+                    <select style="display: block;width: 100%" name="paymentSelectKurir" id="paymentSelectKurir" class="form-control" required>
                         <option></option>
                     </select>
                 </div>
@@ -95,7 +95,7 @@
             <div class="alert alert-warning">Upss. Kamu belum memiliki satupun belanjaan. Yuk belanja dulu.</div>
         <?php } ?>
     </div>
-    <div class="payment-total shadow">
+    <div class="payment-total">
         <h2 class="title">Ringkasan Belanja</h2>
         <hr>
         <div class="list">
