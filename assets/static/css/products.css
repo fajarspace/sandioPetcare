@@ -67,7 +67,7 @@ button {
 .list-gambar{
     display: flex;
 	flex-direction: row;
-    justify-content: center;
+    justify-content: flex-start;
 	height: max-content;
 	margin-top: 10px;
 	overflow: auto;
@@ -75,7 +75,7 @@ button {
     color: transparent;
     position: relative;
     flex-wrap: nowrap;
-    padding: 5px 0;
+    padding: 5px;
     gap: 15px;
 }
 
@@ -174,7 +174,6 @@ button {
     font-weight: 700;
     color: #E88D2F;
 }
-
 
 
 .harga > .rp{
@@ -370,6 +369,9 @@ button {
     }
 }
 @media (max-width: 768px) {
+    .harga {
+        margin-top: -50px;
+    }
 	.container-produk{
         margin: 80px auto;
     }
@@ -395,35 +397,105 @@ button {
         box-shadow: -1px 1px 3px #cacacb;
     }
     .list-gambar{
+        margin: 0;
+        position: relative;
+        background: #3b3b3b54;
+        top: -65px;
         gap: 15px;
+        border-radius: 0 0 5px 5px;
     }
     .list-gambar img {
         border-radius: 5px;
         cursor: pointer;
         width: 50px;
         height: 50px;
+        box-shadow: none;
     }
     .list-gambar::-webkit-scrollbar {
         height: 3px;
     }
     .navigation{
-        width: 100%;
-        display: flex;
-        flex-direction: row;
-        flex-wrap: nowrap;
-        overflow: scroll;
-        gap: 10px;
-        align-items: center;
+        display: none;
+    }
+}
+
+@media (max-width: 414px) {
+    .harga > .judul {
+        font-size: 18px;
+        font-weight: 700;
+        padding: 0 5px;
     }
     
-    .navigation a{
+    .harga > .rp{
+        font-size: 25px;
+        font-weight: 700;
+        color: #FF1E00;
+        padding: 0 10px;
+        padding-bottom: 10px;
+    }
+
+    .harga > .kirim{
+        gap: 5px;
+    }
+    
+    .harga > .kirim > .beli-kosong,
+    .harga > .kirim > .beli{
+        width: 100%;
+        font-size: 14px;
+        font-weight: 700;
+        font-family: 'Quicksand', sans-serif;
+        background: #E88D2F;
+        color: #fff;
+        text-align: center;
+        padding: 10px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    
+    .harga > .kirim > .keranjang-kosong,
+    .harga > .kirim > .keranjang{
+        width: 100%;
+        font-size: 14px;
+        font-weight: 600;
+        background: #fff;
+        font-family: 'Quicksand', sans-serif;
+        color: #E88D2F;
+        text-align: center;
+        padding: 10px;
+        border-radius: 5px;
+        border: 1px solid #E88D2F;
+        cursor: pointer;
+    }
+
+    .harga > .quant {
+        padding: 0;
+        margin-top: -10px;
+        margin-bottom: 10px;
+    }
+    .quant-label {
+        font-size: 14px;
+    }
+    .quant{
+        gap: 8px;
+    }
+    .harga > .quant > .stok {
+        font-size: 13px;
+    }
+    .counter input {
+        width: 40px;
+        line-height: 20px;
+        font-size: 14px;
+    }
+    
+    .counter span {
+        display: block;
+        font-size: 20px;
+        padding: 3px 8px;
+        cursor: pointer;
+        color: #fff;
+    }
+    .detail > .ket {
         font-size: 12px;
         font-weight: 700;
-        letter-spacing: -.5px;
     }
-    .navigation i{
-        font-size: 16px;
-        color: #9FA6B0;
-    }
-    
 }

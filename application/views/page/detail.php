@@ -22,14 +22,6 @@
                     <img src="<?= base_url(); ?>assets/images/product/<?= $d['img']; ?>" alt="gambar" class="thumb">
                 <?php endforeach; ?>
             </div>
-                <?php if($d['img'] > 5) {?> 
-                    <script> 
-                        $('.list-gambar').css('justify-content','flex-start');
-                        $('.list-gambar').css('padding-left','5px');
-                        $('.list-gambar').css('padding-right','5px');
-                    </script> 
-                    <?php
-                } ?>
             </div>
         </div>
         <div class="harga">
@@ -56,7 +48,7 @@
                 
                 <div class="rp">Rp <?= str_replace(",",".",number_format($product['price'])); ?></div>
                 
-                <label for="quant">Kuantitas :</label>
+                <label class="quant-label" for="quant">Kuantitas :</label>
                 <div class="quant">
                     <?php if($setting['promo'] == 1){ ?>
                     <?php if($product['promo_price'] == 0){ ?>
